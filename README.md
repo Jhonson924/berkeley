@@ -26,6 +26,4 @@ A coupon is delivered to your cell phone for a restaurant near where you are dri
 
 ### Logical Data
 
-![Business Process][def]
-
-[def]: images/data-logic.png
+![Business Process](images/data-logic.png)
