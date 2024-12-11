@@ -3,7 +3,7 @@ Berkeley ML/AI Modules and Practical application
 
 ## Practical Application1 <Will the Customer Accept the Coupon>
 ### Context
-A coupon is delivered to your cell phone for a restaurant near where you are driving
+A coupon is delivered to your cell phone for a restaurant near where you are driving.
 ### Business Problem Statement
 
 - Would you accept that coupon and take a short detour to the restaurant? 
