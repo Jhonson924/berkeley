@@ -27,3 +27,13 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 ### Logical Data
 
 ![Business Process](./practical%20application1/images/data-logic.png)
+
+### Findings
+
+#### Gender vs CouponType
+![Business Process](./practical%20application1/images/genderVsCouponType.png)
+
+- Consistency Across Genders: For each activity, the distributions for Male and Female appear very similar in shape and spread.
+- Uniformity in Distribution: The density for activities like "Bar" and "Coffee House" appears fairly uniform between genders, suggesting a similar engagement rate.
+- Activity Engagement: The width of the violin plots indicates where most individuals fall in the distribution for a specific activity (e.g., people are more uniformly distributed in "Carry out & Take away").
+
