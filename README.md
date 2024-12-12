@@ -2,6 +2,9 @@
 Berkeley ML/AI Modules and Practical application
 
 ## Practical Application1 <Will the Customer Accept the Coupon>
+
+## [Juypter Notebook](https://github.com/Jhonson924/berkeley/blob/main/practical%20application1/coupons.ipynb)
+
 ### Context
 A coupon is delivered to driver cell phone for a restaurant near where you are driving.
 
