@@ -40,3 +40,13 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 - Uniformity in Distribution: The density for activities like "Bar" and "Coffee House" appears fairly uniform between genders, suggesting a similar engagement rate.
 - Activity Engagement: The width of the violin plots indicates where most individuals fall in the distribution for a specific activity (e.g., people are more uniformly distributed in "Carry out & Take away").
 
+#### ageAcceptanceRate
+![Business Process](./practical%20application1/images/ageAcceptanceRate.png)
+
+ - Younger individuals, especially those in their 20s and early 30s, show higher coupon acceptance (orange bars dominate in those age groups). Older age groups, while having fewer participants, seem less likely to accept coupons.
+- Across most coupon types, the central tendency (median line) lies in the younger age groups (e.g., mid-20s to early 30s).
+- Bar coupons show a slightly broader distribution, indicating some older individuals accept bar coupons compared to other types.
+##### Summary
+- Younger individuals (20-30 years old) are more likely to accept coupons, regardless of type.
+- Coupon type matters: Bar and restaurant coupons seem to appeal to a broader age range compared to others like coffee houses or carry-out.
+
