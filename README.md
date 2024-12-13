@@ -43,7 +43,7 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 #### ageAcceptanceRate
 ![Business Process](./practical%20application1/images/ageAcceptanceRate.png)
 
- - Younger individuals, especially those in their 20s and early 30s, show higher coupon acceptance (orange bars dominate in those age groups). Older age groups, while having fewer participants, seem less likely to accept coupons.
+ - Younger individuals, especially those in their 20s and early 30s, show higher coupon acceptance (orange bars dominate in those age groups). Older age groups, while having fewer drivers, seem less likely to accept coupons.
 - Across most coupon types, the central tendency (median line) lies in the younger age groups (e.g., mid-20s to early 30s).
 - Bar coupons show a slightly broader distribution, indicating some older individuals accept bar coupons compared to other types.
 ##### Summary
@@ -55,7 +55,7 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 
 - Drivers alone are the largest group and show a higher likelihood of accepting coupons (orange bar is taller than the blue bar for "Alone").
 - Drivers with friends are also more likely to accept coupons, though the gap between acceptance (orange) and non-acceptance (blue) is smaller than for those alone.
-- Drivers with kids or partners have fewer participants, and the acceptance rates are nearly balanced or slightly lower than non-acceptance.
+- Drivers with kids or partners have fewer drivers, and the acceptance rates are nearly balanced or slightly lower than non-acceptance.
 
 - Across most coupon types, drivers who are alone dominate the density of acceptance, indicating they are more likely to use coupons regardless of type.
 - Drivers with friends also show moderate densities, particularly for Bar and Coffee House coupons.
@@ -69,7 +69,7 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 #### BarCoupoun Analysis (1~3 times visited)
 ![Business Process](./practical%20application1/images/barCouponAnalysis1to3times_1.png)
 
--The majority (64.7%) of participants in the group(BAR) accepted the coupon, highlighting a clear preference or tendency to accept bar coupons.
+-The majority (64.7%) of drivers in the group(BAR) accepted the coupon, highlighting a clear preference or tendency to accept bar coupons.
 
 #### onlyBarCoupon Analysis (1~3 times visited)
 ![Business Process](./practical%20application1/images/barCouponAnalysis1to3times.png)
@@ -78,10 +78,20 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 
 - The diagonal of the pairplot contains histograms for each variable, showing its distribution.
 - Variables like age or temperature may show the spread of values across the dataset.
-- Categorical variables (e.g., has_children, accept_coupon) appear as bar plots since they represent discrete values.
+- Variables has_children, accept_coupon appear as bar plots since they represent discrete values.
 
-2. Off-Diagonal (Scatterplots):
+2. Scatterplots:
 
-- The off-diagonal plots compare two variables, with each subplot showing the relationship between one pair.
+- The Scatterplots plots compare two variables, with each subplot showing the relationship between one pair.
 - Temperature vs. Age: Scatterplot showing how these two variables relate.
-- Acceptance Decision vs. Proximity (e.g., to_coupon_distance): Shows how coupon acceptance changes with distance.
+- Acceptance Decision vs. to_coupon distance: Shows how coupon acceptance changes with distance.Clusters near shorter distances may suggest higher acceptance.
+- Direction_Same vs. Acceptance: If traveling in the same direction as the coupon's location (direction_same), drivers are more likely to accept the coupon.
+
+#### Summary
+- Younger drivers are more likely to accept coupons, particularly bar coupons, as evidenced by the clusters around specific age groups.
+- When the direction of travel aligns with the coupon's location, acceptance increases.
+
+#### Next Steps
+- Next Steps for Analysis:
+1. Additional Correlation Analysis
+2. Dive deeper into specific relationships, such as the impact of age, and travel direction on coupon acceptance.
