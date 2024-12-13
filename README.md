@@ -65,3 +65,23 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 - Being alone significantly increases coupon acceptance rates across all types.
 - Friends as passengers also positively influence acceptance but not as strongly as being alone.
 - Kids and partners are associated with lower coupon acceptance rates, likely due to different priorities or constraints during travel.
+
+#### BarCoupoun Analysis (1~3 times visited)
+![Business Process](./practical%20application1/images/barCouponAnalysis1to3times_1.png)
+
+-The majority (64.7%) of participants in the group(BAR) accepted the coupon, highlighting a clear preference or tendency to accept bar coupons.
+
+#### onlyBarCoupon Analysis (1~3 times visited)
+![Business Process](./practical%20application1/images/barCouponAnalysis1to3times.png)
+
+1. Diagonal (Histograms):
+
+- The diagonal of the pairplot contains histograms for each variable, showing its distribution.
+- Variables like age or temperature may show the spread of values across the dataset.
+- Categorical variables (e.g., has_children, accept_coupon) appear as bar plots since they represent discrete values.
+
+2. Off-Diagonal (Scatterplots):
+
+- The off-diagonal plots compare two variables, with each subplot showing the relationship between one pair.
+- Temperature vs. Age: Scatterplot showing how these two variables relate.
+- Acceptance Decision vs. Proximity (e.g., to_coupon_distance): Shows how coupon acceptance changes with distance.
