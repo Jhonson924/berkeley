@@ -50,3 +50,18 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 - Younger individuals (20-30 years old) are more likely to accept coupons, regardless of type.
 - Coupon type matters: Bar and restaurant coupons seem to appeal to a broader age range compared to others like coffee houses or carry-out.
 
+#### passangerAcceptanceRate
+![Business Process](./practical%20application1/images/passangerAcceptanceRate.png)
+
+- Drivers alone are the largest group and show a higher likelihood of accepting coupons (orange bar is taller than the blue bar for "Alone").
+- Drivers with friends are also more likely to accept coupons, though the gap between acceptance (orange) and non-acceptance (blue) is smaller than for those alone.
+- Drivers with kids or partners have fewer participants, and the acceptance rates are nearly balanced or slightly lower than non-acceptance.
+
+- Across most coupon types, drivers who are alone dominate the density of acceptance, indicating they are more likely to use coupons regardless of type.
+- Drivers with friends also show moderate densities, particularly for Bar and Coffee House coupons.
+- Drivers with kids or partners have lower densities overall, indicating less engagement with coupons.
+
+##### Summary
+- Being alone significantly increases coupon acceptance rates across all types.
+- Friends as passengers also positively influence acceptance but not as strongly as being alone.
+- Kids and partners are associated with lower coupon acceptance rates, likely due to different priorities or constraints during travel.
