@@ -29,19 +29,19 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 
 ### Logical Data
 
-![Business Process](./practical%20application1/images/data-logic.png)
+![Business Process](./images/data-logic.png)
 
 ### Key Findings
 
 #### 1. Gender vs CouponType
-![Business Process](./practical%20application1/images/genderVsCouponType.png)
+![Business Process](./images/genderVsCouponType.png)
 
 - Consistency Across Genders: For each activity, the distributions for Male and Female appear very similar in shape and spread.
 - Uniformity in Distribution: The density for activities like "Bar" and "Coffee House" appears fairly uniform between genders, suggesting a similar engagement rate.
 - Activity Engagement: The width of the violin plots indicates where most individuals fall in the distribution for a specific activity (e.g., people are more uniformly distributed in "Carry out & Take away").
 
 #### 2. ageAcceptanceRate
-![Business Process](./practical%20application1/images/ageAcceptanceRate.png)
+![Business Process](./images/ageAcceptanceRate.png)
 
  - Younger individuals, especially those in their 20s and early 30s, show higher coupon acceptance (orange bars dominate in those age groups). Older age groups, while having fewer drivers, seem less likely to accept coupons.
 - Across most coupon types, the central tendency (median line) lies in the younger age groups (e.g., mid-20s to early 30s).
@@ -51,7 +51,7 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 - Coupon type matters: Bar and restaurant coupons seem to appeal to a broader age range compared to others like coffee houses or carry-out.
 
 #### 3. passangerAcceptanceRate
-![Business Process](./practical%20application1/images/passangerAcceptanceRate.png)
+![Business Process](./images/passangerAcceptanceRate.png)
 
 - Drivers alone are the largest group and show a higher likelihood of accepting coupons (orange bar is taller than the blue bar for "Alone").
 - Drivers with friends are also more likely to accept coupons, though the gap between acceptance (orange) and non-acceptance (blue) is smaller than for those alone.
@@ -67,12 +67,12 @@ A coupon is delivered to driver cell phone for a restaurant near where you are d
 - Kids and partners are associated with lower coupon acceptance rates, likely due to different priorities or constraints during travel.
 
 #### 4. BarCoupoun Analysis (1~3 times visited)
-![Business Process](./practical%20application1/images/barCouponAnalysis1to3times_1.png)
+![Business Process](./images/barCouponAnalysis1to3times_1.png)
 
 -The majority (64.7%) of drivers in the group(BAR) accepted the coupon, highlighting a clear preference or tendency to accept bar coupons.
 
 #### 4.1 onlyBarCoupon Analysis (1~3 times visited)
-![Business Process](./practical%20application1/images/barCouponAnalysis1to3times.png)
+![Business Process](./images/barCouponAnalysis1to3times.png)
 
 1. Diagonal (Histograms):
 
