@@ -259,14 +259,14 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - Data enconding approach
 ### 1. Drop, Fill & Convert
 
-**1 Drop row for duplicate VIN number based on price and odometer**
-**2 Drop rows for VIN column = '0'**
-**3 Drop Columns that are not required (id, VIN & region)**
-**4. Drop Columns for size contains 71% of missing value**
-**5. Drop zero values for Price & Odometer**
-**6. Fill categorial Null values (NaN) to Not specified**
-**7. Drop null values for numerical field**
-**8. Convert DataTypes Float to Int and Object to String**
+- **1 Drop row for duplicate VIN number based on price and odometer**
+- **2 Drop rows for VIN column = '0'**
+- **3 Drop Columns that are not required (id, VIN & region)**
+- **4. Drop Columns for size contains 71% of missing value**
+- **5. Drop zero values for Price & Odometer**
+- **6. Fill categorial Null values (NaN) to Not specified**
+- **7. Drop null values for numerical field**
+- **8. Convert DataTypes Float to Int and Object to String**
 
 ### 2. Log Transformation for outliers
 
