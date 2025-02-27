@@ -51,19 +51,12 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 - Check for Missing Values (NaN)
 
 ### Data Preparation , PCA for removing outliers , Data encoding
-- Drop row for duplicate VIN number based on price and odometer
-- Drop rows for VIN column = '0'
-- Drop Columns that are not required (id, VIN & region)
-- Drop Columns for size contains 71% of missing value
-- Drop zero values for Price & Odometer
-- Fill categorial Null values (NaN) to Not specified
-- Drop null values for numerical field
-- Convert DataTypes Object to String
-- Log Transformation for outliers
+- Drop, Fill & Convert
+- Log Transformation for outlier
 - Applying PCA for removing outliers
-- Data Encoding
-- Ordinal encoding
-- One hot encoding for fuel
+- Distribution of 3 key features (Price, Year, Odometer)
+- Odometer vs. Price by Year, (No Outliers)
+- Data Preparation Summary 
 
 ## Business Context 
 
@@ -235,16 +228,18 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - applied log transformation for outliers and applied pca from removing outliers
 - visualized price, year and odometer distributions.
 - Data enconding approach
+### 1. Drop, Fill & Convert
 
-### 1. Drop row for duplicate VIN number based on price and odometer
-### 2. Drop rows for VIN column = '0'
-### 3. Drop Columns that are not required (id, VIN & region)
-### 4. Drop Columns for size contains 71% of missing value
-### 5. Drop zero values for Price & Odometer
-### 6. Fill categorial Null values (NaN) to Not specified
-### 7. Drop null values for numerical field
-### 8. Convert DataTypes Float to Int and Object to String
-### 9. Log Transformation for outliers
+**1 Drop row for duplicate VIN number based on price and odometer**
+**2 Drop rows for VIN column = '0'**
+**3 Drop Columns that are not required (id, VIN & region)**
+**4. Drop Columns for size contains 71% of missing value**
+**5. Drop zero values for Price & Odometer**
+**6. Fill categorial Null values (NaN) to Not specified**
+**7. Drop null values for numerical field**
+**8. Convert DataTypes Float to Int and Object to String**
+
+### 2. Log Transformation for outliers
 
 ![year vs price](./images/scatter_plot%20year%20vs%20price.png)
 **Year vs. Price**
@@ -264,7 +259,7 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - The x-axis (Log Transformed Year) is tightly packed between 7.55 and 7.61, meaning the year range is very narrow.
 - The y-axis (Log Transformed Odometer) has a wider spread, suggesting higher variance in odometer readings.
 
-### 10. Applying PCA for removing outliers
+### 3. Applying PCA for removing outliers
 ![year vs price](./images/scatter_plot_pca%20year%20vs%20price.png)
 **Year vs. Price**
 
@@ -285,7 +280,7 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 **Year vs Odometer**
 - Some outliers still persist at low odometer values for older years, which could indicate either rare well-preserved vehicles or potential data entry errors.
 
-### Distribution of 3 key features (Price, Year, Odometer)
+### 4. Distribution of 3 key features (Price, Year, Odometer)
 ![pca_distribution](./images/pca_distribution.png)
 **Log-Transformed Price Distribution**
 - Right-skewed (long tail): Some cars have very high prices, but they are relatively rare.
@@ -305,7 +300,7 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - Most vehicles are relatively new, as older models are less frequently listed.
 - The right skew indicates rapid depreciation, as fewer very old cars are available.
 
-### Odometer vs. Price by Year, (No Outliers)
+### 5. Odometer vs. Price by Year, (No Outliers)
 
 ![no outliers](./images/scatter_plot_pca_no_outliers.png)
 - Scatter plot visualizes the relationship between Odometer (Mileage) and Price, with data points grouped by Year, after outlier removal.
@@ -315,7 +310,7 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - As odometer (mileage) increases, price decreases, confirming the standard vehicle depreciation trend.
 - Vehicles with lower mileage tend to be priced higher.
 
-## Data Preparation Summary 
+### 6. Data Preparation Summary 
 
 ![summary](./images/boxplot_outliers.png)
 
