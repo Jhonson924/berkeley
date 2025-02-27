@@ -43,12 +43,12 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 ## Contents
 
 ### Exploratory Data Analysis (EDA)
-- 1. Check for zero Values in numerical features
-- 2. Check for zero values in categoraial features
-- 3. Check for Duplicate records
-- 4. Check for Unique Records
-- 5. Check for Outliers
-- 6. Check for Missing Values (NaN)
+- Check for zero Values in numerical features
+- Check for zero values in categoraial features
+- Check for Duplicate records
+- Check for Unique Records
+- Check for Outliers
+- Check for Missing Values (NaN)
 
 ### Data Preparation , PCA for removing outliers , Data encoding
 - Drop row for duplicate VIN number based on price and odometer
