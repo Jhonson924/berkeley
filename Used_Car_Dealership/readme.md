@@ -182,5 +182,36 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - The dataset reveals strong consumer preferences for gasoline-powered, automatic transmission vehicles with clean titles. The most frequent vehicle categories are trucks, SUVs, and sedans, aligning with real-world sales trends. 
 - Fuel efficiency (4-cylinder engines), neutral paint colors, and mid-size to full-size cars dominate the listings, indicating market demand for practicality and affordability. There is a relatively low presence of electric, hybrid, and alternative-fuel vehicles, which might indicate slower adoption rates compared to gasoline-powered cars.
 
+### 5. Check for Outliers
+
+- From describe which fetchs only int & float numerical statstics , ID columns might be not intereseted or relevant to car dealership client, which can be drop off.
+
+![check for outliers](./images/boxplot_outliers.png)
+
+**Data Observation7**
+
+**Price Outliers**
+
+- The price distribution shows a significant number of extreme outliers.
+- There are vehicles listed at extremely low prices (potentially unrealistic or promotional listings) and very high prices, possibly luxury or rare models.
+- A reasonable price range should be determined to filter out erroneous data points.
+- There are some listings where the price is recorded as zero.
+
+- This could indicate:
+- Missing data where sellers did not input the price.
+- Incorrect or erroneous entries, which may need data cleaning
+
+**Year Outliers**
+
+- The year of manufacture appears to have some older vehicles that could be classified as vintage/classic cars.
+- There may also be some outliers for future years, which could be incorrect or pre-orders rather than used listings.
+- The bulk of the data is likely centered around more recent model years.
+
+**Odometer Outliers**
+
+- The odometer readings display a wide range, with some vehicles having extremely high mileage.
+- Some extremely low-mileage cars could be newly listed or incorrect entries.
+- High mileage vehicles may indicate well-used or older vehicles, whereas exceptionally low mileage could indicate showroom models or incorrect entries.
+
 ### Key Findings
 
