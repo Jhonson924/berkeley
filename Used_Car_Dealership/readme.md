@@ -307,7 +307,7 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 
 ### Odometer vs. Price by Year, (No Outliers)
 
-![no outliers]('./images/scatter_plot_pca_no_outliers.png')
+![no outliers](./images/scatter_plot_pca_no_outliers.png)
 - Scatter plot visualizes the relationship between Odometer (Mileage) and Price, with data points grouped by Year, after outlier removal.
 
 - Common odometer readings (e.g., 20,000, 30,000 miles) and price points (e.g., $5,000, $10,000) could be leading to this uniform spacing.
