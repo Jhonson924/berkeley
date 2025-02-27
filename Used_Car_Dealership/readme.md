@@ -89,7 +89,7 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 
 ![Check for Duplicates](./images/duplicate_vins.png)
 
-**Data Observation3**:
+**Data Observation4**:
 - Noticed that same VIN number is listed multiple times the regions are different may be valid due vechile move
 - Few vin as got same odometer value, year.
 - The dataset contains 40,280 unique VINs that have duplicate entries. 
@@ -99,6 +99,88 @@ so,
 - Data entry errors
 - Multiple listings of the same vehicle with updated details
 - Incorrect merging of datasets so around approx 14K duplicate records exists multiple times.
+
+### 4. Check for Unique Records
+-  id value matches the total count of records, how ever the VIN value contains duplicates as seen above.
+
+![check for unique manufacturer](./images/manufacturer_distribution.png)
+
+**Data Observation5**
+
+**Top Manufacturers Dominate Listings**
+
+- Certain manufacturers such as Ford, Chevrolet, Toyota, Honda, and Nissan have significantly higher listings indicating their widespread presence and popularity in the used car market.
+- This aligns with real-world trends where these brands are among the highest-selling automotive manufacturers.
+
+**American Brands Lead the Market**
+- Ford and Chevrolet have the highest number of listings, showing strong demand for American-made vehicles.
+- Brands like Dodge, GMC, and Jeep also have substantial representation, reflecting the popularity of trucks and SUVs.
+
+**Japanese Brands are Strong Contenders**
+- Toyota and Honda are among the most listed brands, reflecting their reputation for reliability, fuel efficiency, and resale value.
+- Nissan, Subaru, and Mazda also have notable listings, reinforcing the popularity of Japanese cars in the used market.
+
+**European Manufacturers Have Lower Representation**
+
+- Brands like BMW, Mercedes-Benz, and Volkswagen have fewer listings compared to American and Japanese brands.
+- This may be due to higher maintenance costs, lower resale demand, or fewer units in circulation.
+Luxury and Specialty Brands Have Minimal Listings
+
+- High-end manufacturers such as Tesla, Porsche, and Land Rover have relatively fewer listings.
+- These brands cater to niche markets, and their high prices might limit their availability in the used car market.
+
+![check for unique remaining columns](./images/column_distribution.png)
+
+**Data Observation6**
+
+**Condition Distribution**
+
+- The majority of the vehicles in the dataset are categorized under a few specific conditions, with many missing or unknown values.
+= "Like new" and "Excellent" conditions appear to be more frequent, while "Salvage" and "Fair" conditions are less common.
+
+**Cylinders Distribution**
+
+- 4-cylinder and 6-cylinder vehicles dominate the dataset, indicating a preference for fuel-efficient and mid-range performance vehicles.
+- 8-cylinder engines, often found in trucks and sports cars, are also present but in smaller numbers.
+
+**Fuel Type Distribution**
+
+- Gasoline is the most common fuel type, suggesting that traditional fuel-powered vehicles still dominate the market.
+- Diesel and hybrid vehicles have relatively lower counts, while electric vehicles make up a small fraction of the dataset.
+
+**Title Status**
+
+- The majority of the vehicles have a "Clean" title, meaning they have not been significantly damaged.
+"Salvage" and "Rebuilt" titles are less frequent, indicating that heavily damaged or repaired vehicles are not as common in listings.
+
+**Transmission Type**
+
+- Automatic transmission is the most prevalent, showing a strong consumer preference for convenience over manual shifting.
+- Manual transmission vehicles are significantly less common, often associated with sports cars or older models.
+
+**Drive Type**
+
+- Front-wheel drive (FWD) and four-wheel drive (4WD/AWD) vehicles appear to be the most common.
+- Rear-wheel drive (RWD) vehicles are less frequent, likely due to their association with sports cars and specific performance vehicles.
+
+**Size Distribution**
+
+- The dataset has a significant number of "Full-size" and "Mid-size" vehicles.
+- Compact cars and subcompacts have a lower frequency, possibly due to demand differences in different regions.
+
+**Vehicle Type**
+
+- Trucks, SUVs, and sedans dominate the listings, which aligns with market trends favoring utility and comfort.
+Other types like convertibles and coupes have lower counts, likely reflecting niche market demand.
+
+**Paint Color Distribution**
+
+- The most common colors include black, white, silver, and gray, which are often considered standard and preferred for resale value.
+- Uncommon colors like yellow, orange, and purple appear much less frequently, indicating a smaller market for such vehicles.
+
+**Note** 
+- The dataset reveals strong consumer preferences for gasoline-powered, automatic transmission vehicles with clean titles. The most frequent vehicle categories are trucks, SUVs, and sedans, aligning with real-world sales trends. 
+- Fuel efficiency (4-cylinder engines), neutral paint colors, and mid-size to full-size cars dominate the listings, indicating market demand for practicality and affordability. There is a relatively low presence of electric, hybrid, and alternative-fuel vehicles, which might indicate slower adoption rates compared to gasoline-powered cars.
 
 ### Key Findings
 
