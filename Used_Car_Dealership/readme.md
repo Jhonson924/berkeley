@@ -315,9 +315,36 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - As odometer (mileage) increases, price decreases, confirming the standard vehicle depreciation trend.
 - Vehicles with lower mileage tend to be priced higher.
 
-### 11. Data Encoding
-### 12. Ordinal encoding
-### 13. One hot encoding for fuel
+## Data Preparation Summary 
+
+![summary](./images/boxplot_outliers.png)
+
+**Price Distribution (Price Boxplot)**
+
+- There are many outliers in high-price values (luxury or premium cars).
+- The median price is relatively low, suggesting most vehicles are affordable.
+- Lower whiskers show some very cheap vehicles (possible salvage or damaged cars).
+
+- Insights:
+
+- Consider removing extreme high-price outliers to prevent misleading data.
+- Investigate very low-priced listings for potential fraudulent or misclassified vehicles.
+
+**Year Distribution (Year Boxplot)**
+
+- The majority of vehicles are from the mid to late 2000s.
+- Old cars (before 1990s) appear as outliers, possibly classic or vintage cars.
+- Newer vehicles (past 2020) might have some anomalies due to incorrect data entries.
+
+- Older cars (pre-1990) should be checked, as they might be incorrectly entered or special cases.
+
+**Odometer Distribution (Odometer Boxplot)**
+
+- The median odometer reading is moderate, but many high-mileage vehicles exist.
+- High-mileage outliers (>300,000 miles) suggest either:
+
+- Extreme odometer readings should be reviewed to detect possible incorrect entries.
+- Very low-mileage listings should be verified as potential new vehicle misclassifications
 
 ### Key Findings
 
