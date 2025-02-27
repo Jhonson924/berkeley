@@ -213,5 +213,21 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - Some extremely low-mileage cars could be newly listed or incorrect entries.
 - High mileage vehicles may indicate well-used or older vehicles, whereas exceptionally low mileage could indicate showroom models or incorrect entries.
 
+### 6. Check for Missing Values (NaN)
+
+![check for missing values]('./images/missing_values.png')
+
+**Data Observation8**
+- Size feature as got around 71% of data missing, may this feature can be dropped.
+- VIN feautre got 37% missing may be it is valid to remove the complete row as without VIN details entered would be inaccurate
+- Year missing data as low percentage from above graph can be removed for the same
+
+### EDA Findings & Recomendation 
+
+- Drop rows if missing values are low (e.g., missing year).
+- Fill categorical values with mode (manufacturer, fuel, transmission).
+- Fill missing numerical values with median (price, odometer).
+- Drop columns with excessive missing data if they are not critical (size)
+
 ### Key Findings
 
