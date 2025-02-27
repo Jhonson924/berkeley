@@ -66,7 +66,6 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 - Simple Linear Regression with PCA No Outliers Dataset
 - Calculate RMSE of Linear Regression - Year with PCA no outliers data
 - Multiple Linear Regression Model
-- Column Transformer and Apply one hot encoding
 - Calculate MSE of Multiple Linear Regression
 
 ### Evaluation
