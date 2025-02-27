@@ -1,7 +1,7 @@
 # Berkeley
 Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 
-## Practical Application1 <Will the Customer Accept the Coupon>
+## Practical Application2 UsedCarDealership <What makes Car More or Less Expensive>
 
 ## [Juypter Notebook](https://github.com/Jhonson924/berkeley/blob/main/Used_Car_Dealership/usedCarDealership.ipynb)
 
@@ -40,19 +40,17 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 
 ![Business Understading](./images/usedCarContext.png)
 
-### Key Findings
+## Contents
 
-#### Business Understanding
+### Exploratory Data Analysis (EDA)
+-- 1. Check for zero Values in numerical features
+-- 2. Check for zero values in categoraial features
+-- 3. Check for Duplicate records
+-- 4. Check for Unique Records
+-- 5. Check for Outliers
+-- 6. Check for Missing Values (NaN)
 
-#### Data Understanding & Analytics
--- Check for zero Values in numerical features
--- Check for Zero values in Categoraial features
--- Check for Duplicate records
--- Check for Unique Records
--- Check for Outliers
--- Check for Missing Values (NaN)
-
-#### Data Preparation , PCA for removing outliers , Data encoding
+### Data Preparation , PCA for removing outliers , Data encoding
 -- Drop row for duplicate VIN number based on price and odometer
 -- Drop rows for VIN column = '0'
 -- Drop Columns that are not required (id, VIN & region)
@@ -66,3 +64,24 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 -- Data Encoding
 -- Ordinal encoding
 -- One hot encoding for fuel
+
+## Business Context 
+
+### Exploratory Data Analysis (EDA)
+
+#### Check for zero Values in numerical features
+
+![Check for zero](./images/zero_values_pie_charts.png)
+
+#### Data Observation1: Price has got around 32895 zero values of 6.6% of total data, Possible that these records dummy/unused and not interested for dealership, will drop $0 price records
+
+#### Data Observation2:odometer has got around 1965 zero values of 0.5 % of total data 426879, though this smallest values of 0 will drop thise record.
+
+#### Check for zero values in categoraial features
+
+![Check for zero](./images/zero_values_categorical.png)
+
+#### Data Observation3:looks there are few records in categorial field with VIN=0 and Model = 0 which records can be removed as with VIN and model number other data will be invalid also this percentage is less.
+
+### Key Findings
+
