@@ -87,7 +87,7 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 
 - Though the number of duplicate rows = 0 but duplicate VIN exists multiple times...
 
-![Check for Duplicates](./images/duplicate_vins.png.png)
+![Check for Duplicates](./images/duplicate_vins.png)
 
 **Data Observation3**:
 - Noticed that same VIN number is listed multiple times the regions are different may be valid due vechile move
