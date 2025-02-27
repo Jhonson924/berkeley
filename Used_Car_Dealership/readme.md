@@ -69,19 +69,19 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 
 ### Exploratory Data Analysis (EDA)
 
-#### Check for zero Values in numerical features
+### Check for zero Values in numerical features
 
 ![Check for zero](./images/zero_values_pie_charts.png)
 
-#### Data Observation1: Price has got around 32895 zero values of 6.6% of total data, Possible that these records dummy/unused and not interested for dealership, will drop $0 price records
+**Data Observation1**: Price has got around 32895 zero values of 6.6% of total data, Possible that these records dummy/unused and not interested for dealership, will drop $0 price records
 
-#### Data Observation2:odometer has got around 1965 zero values of 0.5 % of total data 426879, though this smallest values of 0 will drop thise record.
+**Data Observation2**: odometer has got around 1965 zero values of 0.5 % of total data 426879, though this smallest values of 0 will drop thise record.
 
-#### Check for zero values in categoraial features
+### Check for zero values in categoraial features
 
 ![Check for zero](./images/zero_values_categorical.png)
 
-#### Data Observation3:looks there are few records in categorial field with VIN=0 and Model = 0 which records can be removed as with VIN and model number other data will be invalid also this percentage is less.
+**Data Observation3**:looks there are few records in categorial field with VIN=0 and Model = 0 which records can be removed as with VIN and model number other data will be invalid also this percentage is less.
 
 ### Key Findings
 
