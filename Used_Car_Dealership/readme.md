@@ -215,7 +215,7 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 
 ### 6. Check for Missing Values (NaN)
 
-![check for missing values]('./images/missing_values.png')
+![check for missing values](./images/missing_values.png)
 
 **Data Observation8**
 - Size feature as got around 71% of data missing, may this feature can be dropped.
