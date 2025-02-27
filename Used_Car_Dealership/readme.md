@@ -69,7 +69,7 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 
 ### Exploratory Data Analysis (EDA)
 
-### Check for zero Values in numerical features
+### 1. Check for zero Values in numerical features
 
 ![Check for zero](./images/zero_values_pie_charts.png)
 
@@ -77,11 +77,24 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 
 **Data Observation2**: odometer has got around 1965 zero values of 0.5 % of total data 426879, though this smallest values of 0 will drop thise record.
 
-### Check for zero values in categoraial features
+### 2. Check for zero values in categoraial features
 
 ![Check for zero](./images/zero_values_categorical.png)
 
 **Data Observation3**:looks there are few records in categorial field with VIN=0 and Model = 0 which records can be removed as with VIN and model number other data will be invalid also this percentage is less.
+
+### 3. Check for Duplicate records
+
+Though the number of duplicate rows = 0 but duplicate VIN exists multiple times...
+![Check for Duplicates](./images/duplicateVINSample.png)
+**Data Observation3**:
+Noticed that same VIN number is listed multiple times the regions are different few vin as got same odometer value, year.
+The dataset contains 40,280 unique VINs that have duplicate entries. This means that these 40,280 vehicles have been listed multiple times, contributing to the 348,914 duplicate rows identified earlier
+this depends on various other features like year, odometer, title_status, transmission, drive, fuel and model
+so,
+Data entry errors
+Multiple listings of the same vehicle with updated details
+Incorrect merging of datasets so around approx 14K duplicate records exists multiple times.
 
 ### Key Findings
 
