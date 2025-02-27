@@ -71,18 +71,16 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 
 ### Evaluation
 
-- Evalution Multiple Linear regression
 - Baseline Performance vs Model Performance
-- One-hot encodes categorical variables
 - Sequential Feature Selection (SFS)
 - GridSearchCV Hyperparameter tuning for Ridge and Lasso
 - Evaluate Ridge vs Lasso Regression
 - Coefficients (Ridge vs Lasso)
-- Correlation numerical features
-- Matrix
+- Ridge vs Lasso Regression
 
-### Deployment
+### Key Findings
 
+#### Deployment
 - Ridge Regression Actual vs Predicated Price
 - Lasso Regression Actual vs Predicated Price
 - Price Distribution by Year
@@ -373,8 +371,6 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - Extreme odometer readings should be reviewed to detect possible incorrect entries.
 - Very low-mileage listings should be verified as potential new vehicle misclassifications
 
-## Key Findings
-
 ### Modeling
 
 ### 1. Simple Linear Regression model (Year vs Price)
@@ -488,24 +484,135 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 
 ## Evaluation
 
-1. Evalution Multiple Linear regression
-2. Baseline Performance vs Model Performance
-3. One-hot encodes categorical variables
-4. Sequential Feature Selection (SFS)
-5. GridSearchCV Hyperparameter tuning for Ridge and Lasso
-6. Evaluate Ridge vs Lasso Regression
-7. Coefficients (Ridge vs Lasso)
-8. Correlation numerical features
-9. Matrix
+### 1. Baseline Performance vs Model(Multiple Linear Regression) Performance
+- Baseline model performs poorly (RMSE 12306, R² = 0.00), meaning it has no predictive power.
+- Multiple Linear Regression (RMSE = 8753, R² = 0.49) is significantly better but still has room for improvement.
+- We have an R&sup2; score on the Test dataset of 0.49. This shows that about 49% of the variance is accounted for by the model.
 
-## Deployment
+### 2. Sequential Feature Selection (SFS)
+- Sequential Feature Selection (SFS) to choose the 10 most important features from PCA-transformed data before training a Linear Regression model.
+- Runs the sequential feature selection process:
+- Evaluates each PCA feature's contribution to prediction.
+- Iteratively selects the 10 best principal components.
 
-1. Ridge Regression Actual vs Predicated Price
-2. Lasso Regression Actual vs Predicated Price
-3. Price Distribution by Year
-4. Calculate average (mean) price for each year - Actual and Predicted Prices
-5. Calculate average (mean) price for each range of odometer - Actual and Predicted Prices
-6. Price vs Odometer with Color-coded Condition
+### 3. GridSearchCV Hyperparameter tuning for Ridge and Lasso
+- alpha is the regularization strength parameter:
+- Low values (e.g., 0.01) → Less regularization (model behaves like standard Linear Regression).
+- High values (e.g., 100.0) → More regularization (model shrinks coefficients more aggressively).
+- Performs cross-validation (cv=5) → Splits data into 5 folds for validation.
+- Ridge: Shrinks all coefficients but keeps all features.
+- Lasso: Some coefficients become exactly zero, effectively performing feature selection.
+
+### 4. Evaluate Ridge vs Lasso Regression
+- Almost identical
+- Ridge - Mean Absolute Error (MAE): 7314.280064407188
+- Ridge - Mean Squared Error (MSE): 97397107.0094697
+- Ridge - Root Mean Squared Error (RMSE): 9868.997264639893
+- Ridge - R-squared (R2): 0.3649940734431999
+- Lasso - Mean Absolute Error (MAE): 7314.300525221436
+- Lasso - Mean Squared Error (MSE): 97397074.92183425
+- Lasso - Root Mean Squared Error (RMSE): 9868.995638961153
+- Lasso - R-squared (R2): 0.36499428264693623
+
+*With R2 36% variance**
+
+### 7. Coefficients (Ridge vs Lasso)
+
+- **Year** Older cars reduce price by ~$2,418 per year.
+
+- **Odometer** Higher mileage slightly increases price, which seems counterintuitive (possible data issue).
+
+- **Cylinders** More cylinders increase price by ~$1,012 per unit
+
+- **Manufacturer** Certain manufacturers increase price by ~$2,237
+
+- **Condition**	-1963.86	Worse condition reduces price by ~$1,964.
+
+- **Fuel Type** 	1641.76	Certain fuel types increase price by ~$1,642.
+
+- **Title Status**	-2371.82	Non-clean titles reduce price by ~$2,372 (salvage, rebuilt, etc.).
+
+- **Transmission**	-1465.11	Manual transmission reduces price by ~$1,465 (likely due to market preference).
+
+- **Drive Type**	1410.98	AWD/4WD increases price by ~$1,411.
+
+- **Vehicle Type**	-1494.11	Certain types reduce price by ~$1,494 (e.g., sedans vs. SUVs).
+
+- Hence, (y_intercept) Ridge Regression model is 15,732.78. This value represents the predicted car price when all features are zero.
+
+### 8.  Ridge vs Lasso Regression
+
+- **Similar Performance:** Both Ridge and Lasso regression models have nearly identical Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R² scores, indicating they perform similarly.
+
+- **Moderate Predictive Power:** The R² score of 0.36 suggests that only 36% of price variations are explained by the model, meaning significant room for improvement exists in predictive accuracy.
+
+- **High Prediction Errors:** The MAE 7314 and RMSE 9869 indicate that the model’s predictions deviate from actual prices by several thousand dollars, which could lead to mispricing issues in sales.
+
+## Key Findings
+
+### Deployment
+
+### 1. Ridge Regression Actual vs Predicated Price
+
+![ridge](./images/cars_ridge_regression_plot.png)
+
+ - The spread of blue dots indicates high variance; some predictions are far below or above the ideal fit, showing potential underfitting.
+ - Higher-priced cars tend to be underpredicted (points below the red line), suggesting that Ridge Regression struggles with expensive vehicles
+
+### 2. Lasso Regression Actual vs Predicated Price
+
+![lasso](./images/cars_lasso_regression_plot.png)
+
+- Lasso Regression struggles with high variance in predictions.
+- The model underpredicts expensive cars and overpredicts some cheap ones.
+
+### 3. Price Distribution by Year
+
+![price](./images/cars_price_by_year.png)
+
+- The model consistently predicts lower car prices (orange) than actual prices (blue), particularly for older vehicles.
+- The spread of actual prices for cars from pre-1980s is significantly wide, indicating some vintage cars hold extremely high value.
+- Improved Prediction Accuracy for Newer Cars (Post-2000)
+- Market Price Trends Captured Correctly (Post-2020)
+- The general price increase in recent years (2020-2022) is captured, likely reflecting inflation, supply chain disruptions, and rising demand for used cars.
+
+### 4. Calculate average (mean) price for each year - Actual and Predicted Prices
+
+![price](./images/calc_price_by_year.png)
+
+- The actual prices show significant fluctuations, especially in older cars (before 1960), indicating high variability in classic or vintage car prices.
+- Some peaks (e.g., around 1920 and 1940) could be due to rare collector vehicles being priced significantly higher than average cars.
+- The predicted prices do not follow extreme fluctuations in older years and remain more stable than actual prices.
+- After 1980, the predicted and actual prices become more aligned, suggesting the model is better at estimating prices for modern vehicles.
+- The price trend gradually increases for recent years, capturing inflation, market demand, and newer car depreciation trends more effectively.
+- The model captures the recent price surge (post-2020) fairly well, likely reflecting supply chain issues, inflation, and increased demand for newer cars.
+- However, the actual prices still show higher peaks compared to the predicted ones, meaning luxury or high-demand models might be underpriced by the model.
+
+### 5. Calculate average (mean) price for each range of odometer - Actual and Predicted Prices
+
+![Calc](./images/cars_price_by_odometer.png)
+
+**Negative Correlation Between Odometer and Price**
+
+- As mileage (odometer) increases, the actual car price (blue) decreases, showing the expected negative correlation between vehicle usage and value.
+- Predicted prices (orange) also follow this trend but are more compressed.
+- The model predict high-priced cars accurately (above ~$40,000), as predicted prices do not capture the full range of actual prices.
+
+### 6. Price vs Odometer with Color-coded Condition
+
+![deploy](./images/cars_price_vs_odometer%20corr.png)
+
+- As odometer readings increase, actual car prices decrease significantly, which aligns with standard vehicle depreciation trends.
+- High-mileage cars tend to be valued lower due to wear and tear, potential maintenance costs, and reduced reliability.
+- Vehicles with over 150,000 miles seem to have a price floor, meaning their depreciation slows down after a certain point.
+
+**Impact of Vehicle Condition on Pricing**
+- Higher-condition vehicles (yellow dots) are priced higher compared to lower-condition vehicles (dark purple dots).
+- This suggests that well-maintained cars retain more value, even with higher mileage, making condition a critical pricing factor.
+
+**Outliers Indicating Special Cases**
+
+- Some high-priced outliers with high mileage may be luxury cars, collector vehicles, or models with significant aftermarket modifications.
 
 
 
