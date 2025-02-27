@@ -50,7 +50,7 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 - Check for Outliers
 - Check for Missing Values (NaN)
 
-### Data Preparation , PCA for removing outliers , Data encoding
+### Data Preparation , PCA for removing outliers
 - Drop, Fill & Convert
 - Log Transformation for outlier
 - Applying PCA for removing outliers
