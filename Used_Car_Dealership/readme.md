@@ -229,5 +229,79 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - Fill missing numerical values with median (price, odometer).
 - Drop columns with excessive missing data if they are not critical (size)
 
+## Data Preparation
+
+### 1. Drop row for duplicate VIN number based on price and odometer
+### 2. Drop rows for VIN column = '0'
+### 3. Drop Columns that are not required (id, VIN & region)
+### 4. Drop Columns for size contains 71% of missing value
+### 5. Drop zero values for Price & Odometer
+### 6. Fill categorial Null values (NaN) to Not specified
+### 7. Drop null values for numerical field
+### 8. Convert DataTypes Float to Int and Object to String
+### 9. Log Transformation for outliers
+
+![year vs price](./images/scatter_plot%20year%20vs%20price.png)
+**Year vs. Price**
+
+- Older vehicles (lower years) generally have lower prices.
+- Newer vehicles tend to have higher prices.
+- Some outliers exist where older cars have high prices (potentially classic or luxury cars).
+
+![odometer vs price](./images/scatter_plot%20odometer%20vs%20price.png)
+**Odometer vs. Price**
+
+- Vehicles with higher odometer readings generally have lower prices.
+- Some vehicles deviate from this trend, which could indicate luxury vehicles or misreported data.
+
+![year vs odometer](./images/scatter_plot%20year%20vs%20odometer.png)
+**Year vs Odometer**
+- The x-axis (Log Transformed Year) is tightly packed between 7.55 and 7.61, meaning the year range is very narrow.
+- The y-axis (Log Transformed Odometer) has a wider spread, suggesting higher variance in odometer readings.
+
+### 10. Applying PCA for removing outliers
+![year vs price](./images/scatter_plot_pca%20year%20vs%20price.png)
+**Year vs. Price**
+
+- Price values are more spread out, with a wider range in log-transformed space..
+- PCA-based outlier removal has likely eliminated more extreme cases, improving trend visibility.
+- As Log Transformed Year decreases (older vehicles), the range of price values becomes wider, indicating greater variability in pricing for older models.
+
+![odometer vs price](./images/scatter_plot_pca%20odometer%20vs%20price.png
+**Odometer vs. Price**
+
+- Negative Correlation Between Odometer and Price: As the Log Transformed Odometer increases (higher mileage), the Log Transformed Price generally decreases, confirming the expected trend that vehicles with higher mileage tend to be priced lower..
+**Outliers Detected on Both Ends**
+- Low mileage, high price outliers (upper-left region) could be new or luxury cars.
+- High mileage, low price outliers (lower-right region) likely represent older, heavily used vehicles.
+- The PCA-based outlier removal helps to refine the dataset and exclude extreme anomalies.
+
+![year vs odometer](./images/scatter_plot_pca%20year%20vs%20odometer.png)
+**Year vs Odometer**
+- Some outliers still persist at low odometer values for older years, which could indicate either rare well-preserved vehicles or potential data entry errors.
+
+### Distribution of 3 key features (Price, Year, Odometer)
+![pca_distribution](./images/pca_distribution.png)
+**Log-Transformed Price Distribution**
+- Right-skewed (long tail): Some cars have very high prices, but they are relatively rare.
+- Log transformation has helped normalize the distribution, reducing extreme price variations.
+- Most vehicles are priced around a central value, but a few high-priced outliers still exist.
+
+**Log-Transformed Odometer Distribution**
+- Peak at log odometer ≈ 2.5–2.6, meaning most vehicles have similar mileage after log transformation.
+- Narrow spread, showing less variance in odometer values compared to price.
+- Small left tail suggests a few cars have very low mileage, possibly newer or well-maintained vehicles.
+
+**Year Distribution**
+**Highly skewed towards newer cars**
+- The majority of listings are concentrated around the latest model years.
+- Few cars exist in older year ranges (left side).
+- This suggests that very new cars (likely recent releases) dominate the dataset.
+- Most vehicles are relatively new, as older models are less frequently listed.
+- The right skew indicates rapid depreciation, as fewer very old cars are available.
+
+### 11. Data Encoding
+### 12. Ordinal encoding
+### 13. One hot encoding for fuel
 ### Key Findings
 
