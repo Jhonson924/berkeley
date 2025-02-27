@@ -344,7 +344,7 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 
 ### 6. Data Preparation Summary 
 
-![summary](./images/boxplot_outliers.png)
+![summary](./images/boxplot_outliers_prepare.png)
 
 **Price Distribution (Price Boxplot)**
 
