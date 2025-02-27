@@ -231,6 +231,11 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 
 ## Data Preparation
 
+- Following below steps are executed for dataset preparation by apply drop method to relevant columns, elimanating zero values, fill categrial and drop null values.
+- applied log transformation for outliers and applied pca from removing outliers
+- visualized price, year and odometer distributions.
+- Data enconding approach
+
 ### 1. Drop row for duplicate VIN number based on price and odometer
 ### 2. Drop rows for VIN column = '0'
 ### 3. Drop Columns that are not required (id, VIN & region)
@@ -267,7 +272,7 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - PCA-based outlier removal has likely eliminated more extreme cases, improving trend visibility.
 - As Log Transformed Year decreases (older vehicles), the range of price values becomes wider, indicating greater variability in pricing for older models.
 
-![odometer vs price](./images/scatter_plot_pca%20odometer%20vs%20price.png
+![odometer vs price](./images/scatter_plot_pca%20odometer%20vs%20price.png)
 **Odometer vs. Price**
 
 - Negative Correlation Between Odometer and Price: As the Log Transformed Odometer increases (higher mileage), the Log Transformed Price generally decreases, confirming the expected trend that vehicles with higher mileage tend to be priced lower..
@@ -300,8 +305,19 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - Most vehicles are relatively new, as older models are less frequently listed.
 - The right skew indicates rapid depreciation, as fewer very old cars are available.
 
+### Odometer vs. Price by Year, (No Outliers)
+
+![no outliers]('./images/scatter_plot_pca_no_outliers.png')
+- Scatter plot visualizes the relationship between Odometer (Mileage) and Price, with data points grouped by Year, after outlier removal.
+
+- Common odometer readings (e.g., 20,000, 30,000 miles) and price points (e.g., $5,000, $10,000) could be leading to this uniform spacing.
+- Expected Negative Correlation Between Price and Odometer
+- As odometer (mileage) increases, price decreases, confirming the standard vehicle depreciation trend.
+- Vehicles with lower mileage tend to be priced higher.
+
 ### 11. Data Encoding
 ### 12. Ordinal encoding
 ### 13. One hot encoding for fuel
+
 ### Key Findings
 
