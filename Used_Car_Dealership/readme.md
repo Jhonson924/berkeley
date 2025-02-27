@@ -58,6 +58,38 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 - Odometer vs. Price by Year, (No Outliers)
 - Data Preparation Summary 
 
+### Modeling
+- Simple Linear Regression model (Year vs Price)
+- Calculate Linear Regression RMSE - Year
+- Simple Linear Regression model (Odometer vs Price)
+- Calculate RMSE of Linear Regression - Odometer
+- Simple Linear Regression with PCA No Outliers Dataset
+- Calculate RMSE of Linear Regression - Year with PCA no outliers data
+- Multiple Linear Regression Model
+- Column Transformer and Apply one hot encoding
+- Calculate MSE of Multiple Linear Regression
+
+### Evaluation
+
+- Evalution Multiple Linear regression
+- Baseline Performance vs Model Performance
+- One-hot encodes categorical variables
+- Sequential Feature Selection (SFS)
+- GridSearchCV Hyperparameter tuning for Ridge and Lasso
+- Evaluate Ridge vs Lasso Regression
+- Coefficients (Ridge vs Lasso)
+- Correlation numerical features
+- Matrix
+
+### Deployment
+
+- Ridge Regression Actual vs Predicated Price
+- Lasso Regression Actual vs Predicated Price
+- Price Distribution by Year
+- Calculate average (mean) price for each year - Actual and Predicted Prices
+- Calculate average (mean) price for each range of odometer - Actual and Predicted Prices
+- Price vs Odometer with Color-coded Condition
+
 ## Business Context 
 
 ### Exploratory Data Analysis (EDA)
@@ -341,5 +373,40 @@ Other types like convertibles and coupes have lower counts, likely reflecting ni
 - Extreme odometer readings should be reviewed to detect possible incorrect entries.
 - Very low-mileage listings should be verified as potential new vehicle misclassifications
 
-### Key Findings
+## Key Findings
+
+### Modeling
+
+###1. Simple Linear Regression model (Year vs Price)
+2. Calculate Linear Regression RMSE - Year
+3. Simple Linear Regression model (Odometer vs Price)
+4. Calculate RMSE of Linear Regression - Odometer
+5. Simple Linear Regression with PCA No Outliers Dataset
+6. Calculate RMSE of Linear Regression - Year with PCA no outliers data
+7. Multiple Linear Regression Model
+8. Column Transformer and Apply one hot encoding
+9. Calculate MSE of Multiple Linear Regression
+
+## Evaluation
+
+1. Evalution Multiple Linear regression
+2. Baseline Performance vs Model Performance
+3. One-hot encodes categorical variables
+4. Sequential Feature Selection (SFS)
+5. GridSearchCV Hyperparameter tuning for Ridge and Lasso
+6. Evaluate Ridge vs Lasso Regression
+7. Coefficients (Ridge vs Lasso)
+8. Correlation numerical features
+9. Matrix
+
+## Deployment
+
+1. Ridge Regression Actual vs Predicated Price
+2. Lasso Regression Actual vs Predicated Price
+3. Price Distribution by Year
+4. Calculate average (mean) price for each year - Actual and Predicted Prices
+5. Calculate average (mean) price for each range of odometer - Actual and Predicted Prices
+6. Price vs Odometer with Color-coded Condition
+
+
 
