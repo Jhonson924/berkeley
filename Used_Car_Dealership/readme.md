@@ -86,15 +86,17 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 ### 3. Check for Duplicate records
 
 Though the number of duplicate rows = 0 but duplicate VIN exists multiple times...
-![Check for Duplicates](./images/duplicateVINSample.png)
+![Check for Duplicates](./images/duplicate_vins.png.png)
 **Data Observation3**:
-Noticed that same VIN number is listed multiple times the regions are different few vin as got same odometer value, year.
-The dataset contains 40,280 unique VINs that have duplicate entries. This means that these 40,280 vehicles have been listed multiple times, contributing to the 348,914 duplicate rows identified earlier
-this depends on various other features like year, odometer, title_status, transmission, drive, fuel and model
+- Noticed that same VIN number is listed multiple times the regions are different may be valid due vechile move
+- Few vin as got same odometer value, year.
+- The dataset contains 40,280 unique VINs that have duplicate entries. 
+- This means that these 40,280 vehicles have been listed multiple times, contributing to the 348,914 duplicate rows identified earlier
+- But this depends on various other features like year, odometer, title_status, transmission, drive, fuel and model
 so,
-Data entry errors
-Multiple listings of the same vehicle with updated details
-Incorrect merging of datasets so around approx 14K duplicate records exists multiple times.
+- Data entry errors
+- Multiple listings of the same vehicle with updated details
+- Incorrect merging of datasets so around approx 14K duplicate records exists multiple times.
 
 ### Key Findings
 
