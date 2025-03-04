@@ -87,7 +87,6 @@ Berkeley ML/AI Modules and Practical application II: Used Car Dealership
 - Calculate average (mean) price for each range of odometer - Actual and Predicted Prices
 - Price vs Odometer with Color-coded Condition
 
-## Business Context 
 
 ### Exploratory Data Analysis (EDA)
 
