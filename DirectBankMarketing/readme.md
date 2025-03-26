@@ -159,14 +159,49 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 - Applied `PCA` to reduce dimensionality while preserving 95% variance.
 
 ### 4.1 Distrubrion of Log Transformation
-![logTransformation](./images/logTransform_age_after.png)
+![logTransformation](./images/logTransformation_age_after.png)
 
 - The original age distribution was right-skewed, but after log transformation, the skewness has reduced to 0.78, making it closer to a normal distribution.
 - The highest concentration of ages still falls within the 30-40 years range, indicating that most clients are in their mid-adult phase.
 - The long tail on the right side has significantly shortened, indicating that extreme age values (such as elderly clients) are now more proportionately represented.
 - The Kernel Density Estimate (KDE) line appears smoother and more symmetric after transformation, which suggests that the data is now better suited for statistical modeling.
 
-### 4.2 Data Prepation Summary
+### 4.2 Applying PCA to reduce dimensionality
+![pca](./images/pca.png)
+
+- The first principal component explains about 40% of the variance, indicating that it captures a significant portion of the data's variability.
+- The second component explains around 20% of the variance.
+- Subsequent components contribute progressively less variance, indicating diminishing returns as the number of components increases.
+- The plot follows a "elbow" shape, which is a typical pattern in PCA.
+- The elbow point is around the second or third component, suggesting that adding more components beyond this point contributes minimally to explaining the variance.
+- The first two components together explain around 60% of the variance, while the first three components explain around 75%.
+- Selecting these top components would capture most of the important information while reducing dimensionality.
+- Choosing the first two or three principal components is a good balance between retaining variance and reducing complexity.
+
+### 4.3 Visuzaling Scaled Data
+![scaledFeatures](./images/scaledFeature.png)
+
+- Box plot of the scaled numerical features after applying Principal Component Analysis (PCA). Each box plot represents one of the principal components (PC1 to PC5).
+- PC1 and PC5 show significant numbers of outliers, indicating that some data points have high variance even after dimensionality reduction.
+- These outliers might represent atypical clients or unusual data points, which could influence model predictions.
+- The width of the interquartile range (IQR) varies among the components:
+- PC1 shows a narrower IQR, indicating less spread within the core data.
+- PC2, PC3, and PC4 have wider IQRs, suggesting more variance within these components.
+- Most components show a roughly symmetric distribution except for PC1, which has a slight skew due to the presence of outliers.
+- PC4 appears to have a centered distribution, while PC5 has a slightly negative skew.
+- The distribution of each component is roughly centered around zero, which is typical after standardization and PCA.
+-  Since the principal components are already scaled, they are suitable for use in models that are sensitive to feature magnitudes.
+
+### 4.4 Distribution of Target Variable after Scaling
+![target](./images/targetDistributionAfterScaling.png)
+
+- The plot shows the distribution of the target variable (y_yes) in the dataset, representing whether a client subscribed to a term deposit.
+- The vast majority of instances are labeled as False (non-subscribers), while very few are labeled as True (subscribers).
+- This indicates a highly imbalanced dataset, which can severely affect model performance.
+- Models might become biased towards predicting "no" (non-subscriber) due to the dominance of this class.
+- Metrics such as Precision, Recall, F1-Score, and ROC-AUC are more reliable than accuracy in this context.
+
+### 4.5 Data Prepation Summary
 The data preparation process for the direct bank marketing analysis was conducted in a structured and comprehensive manner. Below are the key steps taken to ensure data quality and readiness for modeling:
 
 **Data Cleaning**
