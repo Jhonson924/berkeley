@@ -19,8 +19,29 @@ The primary goal of this analysis was to predict whether a client would subscrib
 
 ### Data Understanding and Cleaning
 1. **Data Sources:**
-   - Three datasets were analyzed: `bank.csv`, `bank-full.csv`, and `bank-additional.csv`.
-   - `bank.csv` and `bank-full.csv` contain 17 features, while `bank-additional.csv` contains 20 features with richer information.
+   - Three datasets were analyzed: `bank.csv`, `bank-full.csv`, `bank-additional.csv`, `bank-additional-full.csv`.
+   - `bank.csv` and `bank-full.csv` contain 17 features, while `bank-additional.csv` & `bank-additional-full.csv` contains 20 features with richer information.
+
+**Dataset Description:**
+- Source(data-additional-full.csv): The dataset originates from a Portuguese banking institution's direct marketing campaigns involving phone calls.
+- Purpose: The primary goal is to predict whether a customer will subscribe to a term deposit (a type of savings account).
+- Size: It contains 41,188 examples (rows) and 20 input features (columns).
+- Ordering: The data is ordered chronologically, starting from May 2008 to November 2010.
+- Target Variable: The target variable is 'y', which indicates whether a client subscribed to a term deposit ('yes' or 'no').
+
+**Key Features:**
+- Demographics: Likely features like age, job, marital status, education level.
+- Socioeconomic: Features like housing loan, personal loan, employment status.
+- Campaign Information: Details about the campaign, like the number of contacts performed during this campaign, duration of the last contact.
+- Previous Contact: Information on past contacts with the client, like the number of contacts performed before this campaign.
+- Other Factors: Potentially, features like contact communication type, month of the year, day of the week.
+
+**Potential Challenges:**
+
+- Imbalanced Data: It's possible that the number of clients who subscribe to a term deposit is considerably - - lower compared to those who don't. This can affect model performance and may require techniques to address class imbalance.
+- Feature Engineering: Some features may need transformation or combination to extract more relevant information for the prediction task.
+- Model Selection: Selecting the appropriate machine learning model that can effectively handle the data and produce accurate predictions.
+
 
 2. **Data Cleaning:**
    - Handled missing values and duplicates.
