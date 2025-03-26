@@ -132,7 +132,7 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 - The most prominent positive correlation is between pdays and previous (~0.58), indicating that clients who were previously contacted tend to have higher pdays values.
 - Negative correlation between campaign and duration, suggesting that longer calls typically involve fewer repeated contacts.
 
-![bankdata_corr](./images/bankdata_corr.png)
+![dataadditional_corr](./images/dataadditional_corr.png)
 
 - "emp.var.rate" and "euribor3m" show a strong positive correlation (~0.97), indicating that changes in the employment variation rate are closely related to fluctuations in the Euribor 3-month rate.
 - "euribor3m" and "cons.price.idx" also show moderate positive correlation (~0.66), suggesting a link between interest rates and consumer price index.
