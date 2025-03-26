@@ -67,6 +67,7 @@ Models were evaluated using the following metrics:
    - Optimal thresholds varied per model but typically ranged between **0.3 and 0.6** for the best trade-off between precision and recall.
 
 3. **Model Performance:**
+![modelperformance](./images/model_performance.png)
    - Logistic Regression demonstrated the best generalization with high interpretability.
    - SVM performed similarly but was computationally more expensive.
    - Decision Trees provided interpretability but lacked robustness.
