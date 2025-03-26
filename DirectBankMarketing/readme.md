@@ -79,6 +79,52 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 - There are significant outliers on the higher end (ages above 70), especially in the non-subscriber group, indicating that older clients are less likely to subscribe.
 - The distribution is slightly more compact for subscribers compared to non-subscribers, indicating that subscribers tend to be in a more concentrated age range.
 
+### 3.4 Categorical Variable Analysis (jobType)
+![jobDistribution](./images/jobDistribution.png)
+
+- The most common job types among the clients are "admin.", "blue-collar", and "technician".
+- Retired" and "students" show relatively higher subscription rates compared to other job types.
+- Job types like "admin." and "blue-collar" have a significantly higher count of non-subscription (no) compared to subscriptions (yes).
+- "housemaid", "unemployed", "self-employed", and "entrepreneur" have notably low subscription rates.
+- Certain jobs (like "retired" and "student") may be more inclined to subscribe to term deposits, possibly due to different financial priorities or time availability.
+
+### 3.5 Correlation Heatmap
+![correlationHeatmap](./images/correlationHeatmap.png)
+
+**Strong Positive Correlation (Dark Red):**
+- Some features are highly correlated with themselves (diagonal), which is expected.
+- Variables like "emp.var.rate" and "euribor3m" show strong positive correlations, indicating they may capture similar economic trends.
+
+**Strong Negative Correlation (Dark Blue):**
+- A significant negative correlation is observed between "euribor3m" and "cons.price.idx".
+- This suggests that higher interest rates are associated with lower consumer price indices.
+
+**Weak or No Correlation (Gray/Light Colors):**
+- Most of the feature pairs have weak or no significant correlation.
+- This is beneficial for models that prefer independent variables, such as Logistic Regression.
+
+### 3.6 Pairplot to visualize relationships between age, duration, and campaign
+![pairplot](./images/pairplot.png)
+
+**Distribution of Each Variable:**
+- The diagonal plots show KDE plots (Kernel Density Estimates) for each variable.
+- Age: The distribution is skewed towards younger clients (30-40 years).
+- Duration: Most call durations are short, with a long tail indicating some lengthy calls.
+- Campaign: Most clients were contacted fewer than 10 times, with a few outliers receiving significantly more calls.
+
+**Relationship Between Variables:**
+
+- **Age vs. Duration:**
+- Younger clients tend to have shorter call durations.
+- There is no clear relationship between age and duration.
+
+- **Duration vs. Campaign:**
+- Calls with longer durations often result in successful subscriptions (yes).
+- More campaign contacts do not necessarily increase subscription rates.
+
+- **Age vs. Campaign:**
+-  There is no clear relationship between age and the number of campaign contacts.
+
 2. **Data Cleaning:**
    - Handled missing values and duplicates.
    - Performed data encoding for categorical variables.
