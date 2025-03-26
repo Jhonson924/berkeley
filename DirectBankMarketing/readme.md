@@ -4,20 +4,20 @@ Berkeley ML/AI Modules and Practical application III: Portuguese Direct Bank Mar
 ## Practical Application3 Portuguese Direct Bank Marketing via PhoneCalls <What Apply classification methods and Compare>
 Compare the results of k-nearest neighbors, logistic regression, decision trees, and support vector machines.
 
-## [Juypter Notebook](https://github.com/Jhonson924/berkeley/blob/main/DirectBankMarketing/BankMarketing.ipynb)
+## 1. [Juypter Notebook](https://github.com/Jhonson924/berkeley/blob/main/DirectBankMarketing/BankMarketing.ipynb)
 
-### Context
+## 2. Business Context
 - The data is related with direct marketing campaigns (phone calls) of a Portuguese banking institution. 
 - The classification goal is to predict if the client will subscribe a term deposit (variable y).
 
-### Business Problem Statement
+### 2.1 Business Problem Statement
 - The primary goal of this analysis was to predict whether a client would subscribe to a term deposit after a marketing phone call. 
 - This predictive model can significantly enhance marketing efficiency and customer targeting, helping banks minimize costs and maximize campaign success.
 
-### Business Goal
+### 2.2 Business Goal
 - The classification goal is to predict if the client will subscribe (yes/no) a term deposit (variable y).
 
-### Data Understanding
+## 3. Data Understanding
 **Data Sources:**
    - 4 datasets were analyzed: `bank.csv`, `bank-full.csv`, `bank-additional.csv`, `bank-additional-full.csv`.
    - `bank.csv` and `bank-full.csv` contain 17 features, while `bank-additional.csv` & `bank-additional-full.csv` contains 20 features with richer information.
@@ -43,14 +43,15 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 - Feature Engineering: Some features may need transformation or combination to extract more relevant information for the prediction task.
 - Model Selection: Selecting the appropriate machine learning model that can effectively handle the data and produce accurate predictions.
 
-###  Exploratory Data Analysis (EDA)
+## 4. Exploratory Data Analysis (EDA)
 - Visualized the distribution of each feature to understand the data patterns.
 - Analyzed correlation matrices to identify relationships between numerical variables.
 - Plotted pairplots and scatter plots to detect possible outliers and interactions.
 - Derived insights into client profiles that are more likely to subscribe.
 
-1 Distribution of Target Variable
+### 4.1 Distribution of Target Variable
 ![targetDistribution](./images/targetDistribution.png)
+
 **Imbalanced Distribution**
 - The vast majority of instances are labeled as "no".
 - Only a small portion is labeled as "yes".
