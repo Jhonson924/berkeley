@@ -43,6 +43,22 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 - Feature Engineering: Some features may need transformation or combination to extract more relevant information for the prediction task.
 - Model Selection: Selecting the appropriate machine learning model that can effectively handle the data and produce accurate predictions.
 
+###  Exploratory Data Analysis (EDA)
+- Visualized the distribution of each feature to understand the data patterns.
+- Analyzed correlation matrices to identify relationships between numerical variables.
+- Plotted pairplots and scatter plots to detect possible outliers and interactions.
+- Derived insights into client profiles that are more likely to subscribe.
+
+1 Distribution of Target Variable
+![targetDistribution](./images/targetDistribution.png)
+**Imbalanced Distribution**
+- The vast majority of instances are labeled as "no".
+- Only a small portion is labeled as "yes".
+- This clearly indicates a class imbalance problem, which can significantly impact model performance.
+
+**Count Details:**
+- The number of "no" cases is significantly higher (approximately 37,000+).
+- The number of "yes" cases is much lower (around 5,000+).
 
 2. **Data Cleaning:**
    - Handled missing values and duplicates.
