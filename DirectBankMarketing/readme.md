@@ -11,16 +11,17 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 - The classification goal is to predict if the client will subscribe a term deposit (variable y).
 
 ### Business Problem Statement
+- The primary goal of this analysis was to predict whether a client would subscribe to a term deposit after a marketing phone call. 
+- This predictive model can significantly enhance marketing efficiency and customer targeting, helping banks minimize costs and maximize campaign success.
 
- Business Understanding
-The primary goal of this analysis was to predict whether a client would subscribe to a term deposit after a marketing phone call. This predictive model can significantly enhance marketing efficiency and customer targeting, helping banks minimize costs and maximize campaign success.
+### Business Goal
+- The classification goal is to predict if the client will subscribe (yes/no) a term deposit (variable y).
 
----
-
-### Data Understanding and Cleaning
-1. **Data Sources:**
-   - Three datasets were analyzed: `bank.csv`, `bank-full.csv`, `bank-additional.csv`, `bank-additional-full.csv`.
+### Data Understanding
+**Data Sources:**
+   - 4 datasets were analyzed: `bank.csv`, `bank-full.csv`, `bank-additional.csv`, `bank-additional-full.csv`.
    - `bank.csv` and `bank-full.csv` contain 17 features, while `bank-additional.csv` & `bank-additional-full.csv` contains 20 features with richer information.
+   - `bank-additional-full`: will be analyzed for classification model including SVM.
 
 **Dataset Description:**
 - Source(data-additional-full.csv): The dataset originates from a Portuguese banking institution's direct marketing campaigns involving phone calls.
