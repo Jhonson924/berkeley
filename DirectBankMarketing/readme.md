@@ -61,6 +61,16 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 - The number of "no" cases is significantly higher (approximately 37,000+).
 - The number of "yes" cases is much lower (around 5,000+).
 
+### 4.2 Distribution of Age
+![ageDistribution](./images/ageDistribution.png)
+
+- The distribution is right-skewed.
+- Most of the data points are concentrated on the left side of the plot.
+- The peak of the distribution is around 30 to 40 years.
+- This indicates that most clients contacted during the marketing campaign are in their 30s to 40s
+- There are fewer clients from the younger (below 20) and older (above 70) age groups.
+- The right-skewed distribution indicates that while most clients are younger (30-40), a smaller number of clients are significantly older.
+
 2. **Data Cleaning:**
    - Handled missing values and duplicates.
    - Performed data encoding for categorical variables.
