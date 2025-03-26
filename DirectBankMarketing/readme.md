@@ -150,21 +150,55 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 - 4. Outliers are present in some numerical features and may require handling or transformation.
 - 5. The unique value analysis shows variability in categorical and numerical features.
 
-2. **Data Cleaning:**
-   - Handled missing values and duplicates.
-   - Performed data encoding for categorical variables.
-   - Applied log transformation to reduce skewness and minimize the effect of outliers.
+## 4. Data Prepartion
+- Handled missing values and duplicates.
+- Performed data encoding for categorical variables.
+- Applied log transformation to reduce skewness and minimize the effect of outliers.
+- One-hot encoding was applied to categorical features. (Data Transformation)
+- Numerical features were scaled using `StandardScaler`.
+- Applied `PCA` to reduce dimensionality while preserving 95% variance.
 
-3. **Data Transformation:**
-   - One-hot encoding was applied to categorical features.
-   - Numerical features were scaled using `StandardScaler`.
-   - Applied `PCA` to reduce dimensionality while preserving 95% variance.
+### 4.1 Distrubrion of Log Transformation
+![logTransformation](./images/logTransform_age_after.png)
 
-###  Exploratory Data Analysis (EDA)
-1. Visualized the distribution of each feature to understand the data patterns.
-2. Analyzed correlation matrices to identify relationships between numerical variables.
-3. Plotted pairplots and scatter plots to detect possible outliers and interactions.
-4. Derived insights into client profiles that are more likely to subscribe.
+- The original age distribution was right-skewed, but after log transformation, the skewness has reduced to 0.78, making it closer to a normal distribution.
+- The highest concentration of ages still falls within the 30-40 years range, indicating that most clients are in their mid-adult phase.
+- The long tail on the right side has significantly shortened, indicating that extreme age values (such as elderly clients) are now more proportionately represented.
+- The Kernel Density Estimate (KDE) line appears smoother and more symmetric after transformation, which suggests that the data is now better suited for statistical modeling.
+
+### 4.2 Data Prepation Summary
+The data preparation process for the direct bank marketing analysis was conducted in a structured and comprehensive manner. Below are the key steps taken to ensure data quality and readiness for modeling:
+
+**Data Cleaning**
+1. Removed unnecessary columns such as 'duration' that are known only after the outcome and do not aid in prediction.
+2. Checked and handled missing values by filling numerical columns with the mean and categorical columns with the mode.
+3. Addressed remaining NaN values before scaling to ensure no data leakage or errors.
+
+**Handling Outliers**
+1. Identified outliers using the Interquartile Range (IQR) method.
+2. Applied log transformation to skewed numerical features to reduce the impact of outliers and normalize data distribution.
+3. Visualized the effect of outlier handling using scatter plots and pair plots.
+
+**Dimensionality Reduction**
+1. Applied Principal Component Analysis (PCA) to reduce dimensionality while retaining 95% variance.
+2. Visualized the explained variance by PCA components to ensure efficient data representation.
+3. Combined PCA-transformed data with one-hot encoded categorical features to create a final dataset.
+
+**Feature Scaling**
+1. Applied StandardScaler to standardize numerical features, achieving zero mean and unit variance.
+2. Visualized scaled data using box plots to ensure uniform scaling.
+
+**Train-Test Splitting**
+1. Split the final preprocessed dataset into training and testing sets (80-20 split).
+2. Applied stratification to preserve the distribution of the target variable ('y_yes').
+
+**Visualizations and Validation**
+1. Used scatter plots, box plots, pair plots, and distribution plots to validate data transformations.
+2. Ensured that data quality and consistency were maintained after each transformation step.
+
+**Summary:**
+The data preparation pipeline effectively handled data cleaning, outlier management, dimensionality reduction, feature scaling, and train-test splitting. These steps ensured that the data was consistent, normalized, and ready for efficient model training and evaluation. The resulting dataset is well-prepared to build robust and accurate predictive models.
+
 
 ### Modeling and Evaluation
 1. Built four classification models:
