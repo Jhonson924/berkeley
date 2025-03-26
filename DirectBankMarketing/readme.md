@@ -114,16 +114,41 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 
 **Relationship Between Variables:**
 
-- **Age vs. Duration:**
+**Age vs. Duration:**
 - Younger clients tend to have shorter call durations.
 - There is no clear relationship between age and duration.
 
-- **Duration vs. Campaign:**
+**Duration vs. Campaign:**
 - Calls with longer durations often result in successful subscriptions (yes).
 - More campaign contacts do not necessarily increase subscription rates.
 
-- **Age vs. Campaign:**
+**Age vs. Campaign:**
 -  There is no clear relationship between age and the number of campaign contacts.
+
+### 3.7 Correlation Matrix Comparison (All Dataset)
+![bankdata_corr](./images/bankdata_corr.png)
+
+- Both datasets show very similar correlation patterns, indicating consistent relationships across different dataset sizes or sampling methods.
+- The most prominent positive correlation is between pdays and previous (~0.58), indicating that clients who were previously contacted tend to have higher pdays values.
+- Negative correlation between campaign and duration, suggesting that longer calls typically involve fewer repeated contacts.
+
+![bankdata_corr](./images/bankdata_corr.png)
+
+- "emp.var.rate" and "euribor3m" show a strong positive correlation (~0.97), indicating that changes in the employment variation rate are closely related to fluctuations in the Euribor 3-month rate.
+- "euribor3m" and "cons.price.idx" also show moderate positive correlation (~0.66), suggesting a link between interest rates and consumer price index.
+- There is a significant negative correlation between "emp.var.rate" and "cons.conf.idx" (-0.42), indicating that higher employment variation rates are associated with lower consumer confidence.
+- "euribor3m" also negatively correlates with "cons.conf.idx" (-0.43), indicating that higher interest rates reduce consumer confidence.
+
+### 3.8 Data Check Summary
+- Outliers are identified using the Interquartile Range (IQR) method.
+- Numerical features with high outlier counts should be further investigated to determine if these are genuine anomalies or data entry errors.
+
+**Summary**
+- 1. Zero values are minimal or absent in both numerical and categorical features.
+- 2. No significant issues with missing data, which simplifies preprocessing.
+- 3. Duplicate rows are identified and should be removed.
+- 4. Outliers are present in some numerical features and may require handling or transformation.
+- 5. The unique value analysis shows variability in categorical and numerical features.
 
 2. **Data Cleaning:**
    - Handled missing values and duplicates.
