@@ -11,7 +11,6 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 - The classification goal is to predict if the client will subscribe a term deposit (variable y).
 
 ### 1.2 Business Problem Statement
-- The primary goal of this analysis was to predict whether a client would subscribe to a term deposit after a marketing phone call. 
 - This predictive model can significantly enhance marketing efficiency and customer targeting, helping banks minimize costs and maximize campaign success.
 
 ### 1.2 Business Goal
