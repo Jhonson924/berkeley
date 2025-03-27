@@ -290,7 +290,7 @@ The data preparation pipeline effectively handled data cleaning, outlier managem
 - Class Imbalance Impact: The model still fails to detect most positive cases, suggesting that further tuning or balancing techniques (like class weighting or SMOTE) are needed to improve recall without compromising precision.
 
 ### 5.6 Decision Boundary: KNN
-![db_knn](./images/K-Nearest%20Neighbors.png)
+![db_knn](./images/DecisionBoundary_K-Nearest%20Neighbors.png)
 
 - The boundary is non-linear and follows the distribution of training points.
 - The boundary is formed based on majority voting from neighboring data points, which is characteristic of KNN.
@@ -304,7 +304,7 @@ The data preparation pipeline effectively handled data cleaning, outlier managem
 - The decision boundary does not generalize well and may overfit to noisy data or outliers.
 
 ### 5.7 Decision Boundary: Logistic Regerssion
-![db_lr](./images/Logistic%20Regression.png)
+![db_lr](./images/DecisionBoundary_Logistic%20Regression.png)
 
 - The boundary is straight and linear, which is characteristic of Logistic Regression.
 - The decision boundary suggests that clients contacted in October (month_oct = 1) have a slightly higher probability of being predicted as subscribers.
@@ -313,7 +313,7 @@ The data preparation pipeline effectively handled data cleaning, outlier managem
 - Logistic Regression is more suitable when the decision boundary is expected to be linear or close to linear.
 
 ### 5.8 Decision Boundary: Decision Tree
-![db_dt](./images/Decision%20Tree.png)
+![db_dt](./images/DecisionBoundary_Decision%20Tree.png)
 
 - The decision boundary is a vertical straight line, indicating that the model made a binary split based solely on the month_oct feature.
 - The model does not utilize the marital_unknown feature for splitting, indicating that this feature has less importance compared to month_oct.
@@ -321,7 +321,7 @@ The data preparation pipeline effectively handled data cleaning, outlier managem
 - The sharp, vertical decision boundary indicates that the model heavily relies on the month_oct feature to make predictions.
 
 ### 5.9 Decision Boundary: SVM
-![db_dt](./images/Support%20Vector%20Machine.png)
+![db_dt](./images/DecisionBoundary_Support%20Vector%20Machine.png)
 
 -  Boundary appears as a small circular region where Class 1 (subscribers) is identified within a larger Class 0 (non-subscribers) region.
 - The narrow boundary around a few data points indicates that the model is overfitting to a very specific pattern.
