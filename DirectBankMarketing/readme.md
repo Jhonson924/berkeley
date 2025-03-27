@@ -409,8 +409,8 @@ Models were evaluated using the following metrics using Thershold.
 - It slightly improves when precision increases but remains low overall.
 
 ### 6.5 Evaluation Metrics for All Models
-Model  Accuracy  Precision    Recall  F1-Score   ROC-AUC
-0  Logistic Regression   0.98619        0.8  0.101266  0.179775  0.556422
+|Model|  |Accuracy|  |Precision|    |Recall|  |F1-Score|   |ROC-AUC|
+|Logistic Regression|   0.98619 |       0.8  0.101266  0.179775  0.556422
 1                  SVM   0.98619        0.8  0.101266  0.179775  0.556422
 2        Decision Tree   0.98619        0.8  0.101266  0.179775  0.556422
 3                  KNN   0.98619        0.8  0.101266  0.179775  0.556422
