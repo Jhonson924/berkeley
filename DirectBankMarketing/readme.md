@@ -245,7 +245,7 @@ The data preparation pipeline effectively handled data cleaning, outlier managem
 - Visualized decision boundaries to understand model behavior.
 
 ### 5.1 K-Nearest Neighbors (KNN): Confusion_matrix 
-![confusion_matrix](./images/confusion_matrix_K-Nearest Neighbors.png)
+![confusion_matrix](./images/confusion_matrix_K-Nearest%20Neighbors.png)
 
 **True Negatives (TN):**
 - 5207 instances are correctly classified as non-subscribers (0).
