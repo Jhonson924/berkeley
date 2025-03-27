@@ -247,26 +247,44 @@ The data preparation pipeline effectively handled data cleaning, outlier managem
 ### 5.1 K-Nearest Neighbors (KNN): Confusion_matrix 
 ![confusion_matrix](./images/confusion_matrix_K-Nearest%20Neighbors.png)
 
-**True Negatives (TN):**
-- 5207 instances are correctly classified as non-subscribers (0).
-- This indicates that the model is very good at identifying clients who did not subscribe.
-
-**False Negatives (FN):**
-- 75 instances were incorrectly classified as non-subscribers (0) when they actually subscribed.
-- This is a major issue as the model fails to identify clients who are likely to subscribe.
-
-**True Positives (TP):**
-- 4 instances are correctly classified as subscribers (1).
-- This shows that the model has extremely low success in detecting positive cases.
-
-**False Positives (FP):**
-- 0 instances were incorrectly classified as subscribers (1) when they were actually non-subscribers.
-- This means the model does not falsely predict positive cases.
-
 **Model Performance Concerns:**
-- The model has a high accuracy but low recall and precision for the positive class.
-- The imbalance between classes results in the model overwhelmingly predicting the majority class (no subscription).
-- This highlights the need to balance the dataset or use techniques like SMOTE or class weighting to improve the detection of subscribers.
+- Accuracy: The model exhibits high accuracy for predicting the majority class (no), but this is largely due to the dominance of the negative class.
+- Precision: Precision for the positive class (yes) is extremely low because the model predicts very few positive cases (only 4 true positives out of 79 actual positives).
+- Recall: The recall is very poor for subscribers (yes), indicating that the model fails to capture most positive cases (75 false negatives).
+- F1-Score: The combination of low precision and low recall results in a negligible F1-score, highlighting the model’s inability to effectively classify the minority class.
+- Class Imbalance Impact: The model is heavily biased towards the majority class, making it unreliable for detecting positive outcomes. Applying techniques like SMOTE or class weighting could significantly improve performance.
+
+### 5.2 Logistic Regression: Confusion_matrix 
+![confusion_matrix_LR](./images/confusion_matrix_Logistic%20Regression.png)
+
+**Model Performance:**
+- Accuracy: The model shows high accuracy for predicting non-subscribers, similar to the KNN model, due to the class imbalance.
+
+- Precision: Precision for the positive class (yes) is extremely low, indicating that the model rarely identifies actual subscribers correctly.
+
+- Recall: The recall is very poor, as the model identifies only 3 true positives while missing 76 actual subscribers.
+
+- F1-Score: The combination of low precision and recall results in a very low F1-score, making the model impractical for positive class prediction.
+
+- Class Imbalance Issue: The model is highly skewed towards predicting the majority class, highlighting the need for class balancing techniques like adjusted class weights or oversampling of positive cases.
+
+### 5.3 Decision Tree: Confusion_matrix 
+![confusion_matrix_DT](./images/confusion_matrix_Decision%20Tree.png)
+
+**Model Performance - Decision Tree**
+
+- Accuracy: The model has high accuracy in predicting the majority class (non-subscribers), but accuracy alone is misleading due to class imbalance.
+- Precision: The precision for the positive class (subscribers) is low, as many predictions labeled as subscribers are actually non-subscribers (98 false positives).
+- Recall: The recall for the positive class is also very low, indicating that the model fails to correctly identify most actual subscribers (only 7 true positives).
+- F1-Score: The low precision and recall result in a poor F1-Score, indicating the model struggles to balance between false positives and false negatives.
+- Class Imbalance Impact: The model tends to overfit the majority class (no), making it ineffective for predicting the minority class (yes). Techniques like balancing the dataset or using ensemble methods could improve performance.
+
+### 5.4 SVM: Confusion_matrix 
+![confusion_matrix_SVM](./images/confusion_matrix_Support%20Vector%20Machine.png)
+
+**Model Performance:**
+- The model demonstrates high accuracy but low recall for the positive class.
+- Similar to KNN, the severe class imbalance leads the model to overwhelmingly predict the majority class (no).
 
 ### 6. Evaluation Metrics
 Models were evaluated using the following metrics:
