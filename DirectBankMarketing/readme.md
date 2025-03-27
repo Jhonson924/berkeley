@@ -234,18 +234,41 @@ The data preparation process for the direct bank marketing analysis was conducte
 The data preparation pipeline effectively handled data cleaning, outlier management, dimensionality reduction, feature scaling, and train-test splitting. These steps ensured that the data was consistent, normalized, and ready for efficient model training and evaluation. The resulting dataset is well-prepared to build robust and accurate predictive models.
 
 
-### Modeling and Evaluation
-1. Built four classification models:
+## 5. Modeling
+**Built four classification models**
    - **Logistic Regression**
    - **Support Vector Machine (SVM)**
    - **Decision Trees**
    - **K-Nearest Neighbors (KNN)**
+- Applied cross-validation and hyperparameter tuning to optimize each model.
+- Performed threshold optimization to balance precision and recall.
+- Visualized decision boundaries to understand model behavior.
 
-2. Applied cross-validation and hyperparameter tuning to optimize each model.
-3. Performed threshold optimization to balance precision and recall.
-4. Visualized decision boundaries to understand model behavior.
+### 5.1 K-Nearest Neighbors (KNN): Confusion_matrix 
+![confusion_matrix](./images/confusion_matrix_K-Nearest Neighbors.png)
 
-### Evaluation Metrics
+**True Negatives (TN):**
+- 5207 instances are correctly classified as non-subscribers (0).
+- This indicates that the model is very good at identifying clients who did not subscribe.
+
+**False Negatives (FN):**
+- 75 instances were incorrectly classified as non-subscribers (0) when they actually subscribed.
+- This is a major issue as the model fails to identify clients who are likely to subscribe.
+
+**True Positives (TP):**
+- 4 instances are correctly classified as subscribers (1).
+- This shows that the model has extremely low success in detecting positive cases.
+
+**False Positives (FP):**
+- 0 instances were incorrectly classified as subscribers (1) when they were actually non-subscribers.
+- This means the model does not falsely predict positive cases.
+
+**Model Performance Concerns:**
+- The model has a high accuracy but low recall and precision for the positive class.
+- The imbalance between classes results in the model overwhelmingly predicting the majority class (no subscription).
+- This highlights the need to balance the dataset or use techniques like SMOTE or class weighting to improve the detection of subscribers.
+
+### 6. Evaluation Metrics
 Models were evaluated using the following metrics:
 - **Accuracy:** Proportion of correctly predicted instances.
 - **Precision:** Accuracy of positive predictions.
