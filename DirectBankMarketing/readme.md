@@ -416,6 +416,49 @@ Models were evaluated using the following metrics using Thershold.
 | Decision Tree        | 0.98619 | 0.800    | 0.101  | 0.180   | 0.556  |
 | KNN                  | 0.98619 | 0.800    | 0.101  | 0.180   | 0.556  |
 
+## 7. Deployment
+![modelperformance](./images/model_performance.png)
+
+- Logistic Regression demonstrated the best generalization with high interpretability.
+- SVM performed similarly but was computationally more expensive.
+- Decision Trees provided interpretability but lacked robustness.
+- KNN was sensitive to feature scaling and dimensionality.
+
+**Logistic Regression and SVM:**
+- Both models perform similarly across all metrics, indicating consistent performance.
+- These models are more suitable when interpretability and generalization are important.
+
+**Decision Tree:**
+- The model shows slightly better recall but lower precision, indicating a tendency to overfit and capture more positives at the cost of accuracy.
+
+**KNN:**
+- Similar to the Decision Tree, KNN shows moderate recall and slightly better F1-Score, but still not significantly better than Logistic Regression or SVM.
+
+### 7.1 Deployment Summary
+
+**Accuracy**
+- All four models demonstrate very high accuracy (close to 1.0), indicating that the models are able to correctly classify the majority of instances.
+- This high accuracy is primarily due to the imbalanced nature of the dataset, where the majority class (no subscription) dominates.
+
+**Precision**
+- Precision is significantly high for all models, indicating that when a positive prediction is made, it is often correct.
+- Logistic Regression and SVM show similar precision values, slightly better than Decision Tree and KNN.
+
+**Recall**
+- Recall is notably lower than precision for all models, indicating that they struggle to capture all the actual positive cases.
+- This is a common issue when dealing with imbalanced data, where models prioritize predicting the majority class.
+
+**F1-Score**
+- The F1-Score, being a harmonic mean of precision and recall, is also relatively low, reflecting the poor balance between capturing positives and minimizing false positives.
+- Decision Tree and KNN show marginally better F1-scores than Logistic Regression and SVM.
+
+**ROC-AUC**
+- The ROC-AUC metric shows the ability of the model to distinguish between classes.
+- The values are moderately high, indicating that the models perform reasonably well in ranking positive instances higher than negative ones.
+
+- Logistic Regression and SVM are more suitable when high precision and stability are needed.
+- Decision Tree and KNN can be preferred if capturing as many positives as possible (recall) is more important.
+
 ### Key Findings
 1. **Best Performing Models:**
    - **Logistic Regression and SVM** showed the highest accuracy and balanced precision-recall scores.
@@ -426,11 +469,7 @@ Models were evaluated using the following metrics using Thershold.
    - Optimal thresholds varied per model but typically ranged between **0.3 and 0.6** for the best trade-off between precision and recall.
 
 3. **Model Performance:**
-![modelperformance](./images/model_performance.png)
-   - Logistic Regression demonstrated the best generalization with high interpretability.
-   - SVM performed similarly but was computationally more expensive.
-   - Decision Trees provided interpretability but lacked robustness.
-   - KNN was sensitive to feature scaling and dimensionality.
+
 
 ### Recommendations
 1. **Model Deployment:**
