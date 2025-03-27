@@ -328,13 +328,28 @@ The data preparation pipeline effectively handled data cleaning, outlier managem
 - The tiny prediction area for subscribers (yes) reflects the lack of positive samples in the training data.
 
 
-### 6. Evaluation Metrics
-Models were evaluated using the following metrics:
+## 6. Evaluation Metrics
+Models were evaluated using the following metrics using Thershold.
 - **Accuracy:** Proportion of correctly predicted instances.
 - **Precision:** Accuracy of positive predictions.
 - **Recall:** Ability to detect actual positives.
 - **F1-Score:** Balance between precision and recall.
 - **ROC-AUC:** Ability to distinguish between classes.
+
+### 6.1 KNN: Thershold
+![th_knn](./images/th_knn.png)
+
+**Accuracy**: The accuracy remains high across most thresholds, showing that the model correctly classifies the majority class (no) regardless of the threshold.
+- The slight dip and rise indicate minor changes when the threshold varies.
+
+**Precision**: Starts low but rises sharply around 0.2
+- Precision reaches its maximum when the threshold is high (~0.9), meaning the model becomes more conservative in predicting positives (fewer false positives).
+
+**Recall**: Sharply drops as the threshold increases, indicating that fewer positive cases are being identified.
+- High recall at low thresholds means the model predicts more positives, but many are false positives.
+
+**F1-Score**: The F1-score is relatively low throughout, showing that neither precision nor recall is consistently high.
+- The balance between precision and recall is not well maintained at any threshold.
 
 ### Key Findings
 1. **Best Performing Models:**
