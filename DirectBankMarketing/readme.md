@@ -351,6 +351,63 @@ Models were evaluated using the following metrics using Thershold.
 **F1-Score**: The F1-score is relatively low throughout, showing that neither precision nor recall is consistently high.
 - The balance between precision and recall is not well maintained at any threshold.
 
+### 6.2 Logistic Regression: Thershold
+![th_lr](./images/th_lr.png)
+
+**Accuracy** 
+- The accuracy remains consistently high (close to 1) throughout most threshold values.
+- This high accuracy is misleading because the model predominantly predicts the majority class (no) due to class imbalance.
+
+**Precision**
+- Precision starts low at lower thresholds and significantly increases between 0.2 and 0.4.
+- It reaches a peak and then sharply drops near the 0.6 threshold.
+- This indicates that at higher thresholds, the model becomes more conservative, resulting in fewer false positives.
+
+**Recall**
+- Recall starts at 1.0 (indicating that all positives are predicted) but drops drastically as the threshold increases.
+- After the initial drop, it stabilizes at a low value, indicating that the model misses many actual positives as the threshold becomes more stringent.
+
+**F1-Score**
+- The F1-score remains low across thresholds, indicating that the balance between precision and recall is not favorable at any point.
+- The model struggles to achieve a balance between identifying positives and minimizing false positives.
+
+### 6.3 Decision Tree: Thershold
+![th_dt](./images/th_dt.png)
+
+**Accuracy**
+- The accuracy remains consistently high (close to 1) throughout most thresholds.
+- This reflects that the model is highly accurate in predicting the majority class (no).
+
+**Precision**
+- Precision starts low and increases as the threshold rises, indicating that as the model becomes more conservative, precision improves.
+- The precision peaks around 0.4 to 0.6, but sharply drops at higher thresholds.
+
+**Recall**:
+- Recall starts at 1.0 when the threshold is low (meaning all positives are captured).
+- It drastically decreases and remains low for most thresholds, indicating that the model fails to capture positive cases as the threshold increases.
+
+**F1-Score**:
+- The F1-score remains consistently low, showing that the model does not balance precision and recall effectively.
+
+### 6.4 SVM: Thershold
+![th_svm](./images/th_svm.png)
+
+**Accurracy**
+- The accuracy remains consistently high throughout almost all thresholds.
+- This indicates that the model is correctly predicting the majority class (no) most of the time.
+
+**Precision**
+- Precision increases sharply at the very beginning and then plateaus at a high value.
+- The precision sharply drops at the threshold around 0.6, indicating that the model becomes too conservative, leading to almost no positive predictions.
+
+**Recall**
+- Recall drops immediately from 1.0 to a significantly low value and remains there throughout.
+- This shows that the model fails to capture most of the positive cases after the initial drop.
+
+**F1-Score**
+- The F1-score remains consistently low, indicating that the balance between precision and recall is not favorable.
+- It slightly improves when precision increases but remains low overall.
+
 ### Key Findings
 1. **Best Performing Models:**
    - **Logistic Regression and SVM** showed the highest accuracy and balanced precision-recall scores.
