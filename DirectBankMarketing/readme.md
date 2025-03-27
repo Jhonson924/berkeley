@@ -283,8 +283,50 @@ The data preparation pipeline effectively handled data cleaning, outlier managem
 ![confusion_matrix_SVM](./images/confusion_matrix_Support%20Vector%20Machine.png)
 
 **Model Performance:**
-- The model demonstrates high accuracy but low recall for the positive class.
-- Similar to KNN, the severe class imbalance leads the model to overwhelmingly predict the majority class (no).
+- Accuracy: The model exhibits high accuracy primarily due to correctly predicting the majority class (no), similar to other models impacted by class imbalance.
+- Precision: The precision for the positive class (yes) is relatively higher compared to KNN and Logistic Regression, as it correctly identifies 8 true positives with only 1 false positive.
+- Recall: The recall remains low, as it correctly identifies only 8 out of 79 actual subscribers, leading to 71 false negatives.
+- F1-Score: The F1-score is still low despite slightly better precision compared to other models, as recall is significantly low.
+- Class Imbalance Impact: The model still fails to detect most positive cases, suggesting that further tuning or balancing techniques (like class weighting or SMOTE) are needed to improve recall without compromising precision.
+
+### 5.6 Decision Boundary: KNN
+![db_knn](./images/K-Nearest%20Neighbors.png)
+
+- The boundary is non-linear and follows the distribution of training points.
+- The boundary is formed based on majority voting from neighboring data points, which is characteristic of KNN.
+- The red region (Class 0) indicates areas where the model predicts non-subscribers.
+- The blue region (Class 1) indicates areas where the model predicts subscribers.
+- The sharp edges and irregular boundaries indicate the sensitivity of KNN to neighboring points.
+- The blue data points (Class 1) are scarce compared to red data points (Class 0), showing the class imbalance problem.
+- The few blue points inside the red region demonstrate how local neighbors influence the boundary.
+- The decision boundary heavily depends on the number of neighbors (K) chosen.
+- The imbalance between classes makes it hard for KNN to correctly identify positive cases.
+- The decision boundary does not generalize well and may overfit to noisy data or outliers.
+
+### 5.7 Decision Boundary: Logistic Regerssion
+![db_lr](./images/Logistic%20Regression.png)
+
+- The boundary is straight and linear, which is characteristic of Logistic Regression.
+- The decision boundary suggests that clients contacted in October (month_oct = 1) have a slightly higher probability of being predicted as subscribers.
+- The linear nature of the decision boundary indicates that it may underfit complex patterns or non-linear relationships.
+- The model attempts to draw a clear separation between the two classes based on the input features.
+- Logistic Regression is more suitable when the decision boundary is expected to be linear or close to linear.
+
+### 5.8 Decision Boundary: Decision Tree
+![db_dt](./images/Decision%20Tree.png)
+
+- The decision boundary is a vertical straight line, indicating that the model made a binary split based solely on the month_oct feature.
+- The model does not utilize the marital_unknown feature for splitting, indicating that this feature has less importance compared to month_oct.
+- The model may lack generalization since it does not consider multiple variables at once.
+- The sharp, vertical decision boundary indicates that the model heavily relies on the month_oct feature to make predictions.
+
+### 5.9 Decision Boundary: SVM
+![db_dt](./images/Support%20Vector%20Machine.png)
+
+-  Boundary appears as a small circular region where Class 1 (subscribers) is identified within a larger Class 0 (non-subscribers) region.
+- The narrow boundary around a few data points indicates that the model is overfitting to a very specific pattern.
+- The tiny prediction area for subscribers (yes) reflects the lack of positive samples in the training data.
+
 
 ### 6. Evaluation Metrics
 Models were evaluated using the following metrics:
