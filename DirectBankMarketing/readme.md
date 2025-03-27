@@ -408,12 +408,13 @@ Models were evaluated using the following metrics using Thershold.
 - The F1-score remains consistently low, indicating that the balance between precision and recall is not favorable.
 - It slightly improves when precision increases but remains low overall.
 
-### 6.5 Evaluation Metrics for All Models
-|Model|  |Accuracy|  |Precision|    |Recall|  |F1-Score|   |ROC-AUC|
-|Logistic Regression|   0.98619 |       0.8  0.101266  0.179775  0.556422
-1                  SVM   0.98619        0.8  0.101266  0.179775  0.556422
-2        Decision Tree   0.98619        0.8  0.101266  0.179775  0.556422
-3                  KNN   0.98619        0.8  0.101266  0.179775  0.556422
+### 6.5 Model Performance Summary
+| Model                | Accuracy | Precision | Recall  | F1-Score | ROC-AUC |
+|----------------------|---------|----------|--------|---------|--------|
+| Logistic Regression  | 0.98619 | 0.800    | 0.101  | 0.180   | 0.556  |
+| SVM                  | 0.98619 | 0.800    | 0.101  | 0.180   | 0.556  |
+| Decision Tree        | 0.98619 | 0.800    | 0.101  | 0.180   | 0.556  |
+| KNN                  | 0.98619 | 0.800    | 0.101  | 0.180   | 0.556  |
 
 ### Key Findings
 1. **Best Performing Models:**
