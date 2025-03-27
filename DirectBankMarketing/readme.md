@@ -469,7 +469,13 @@ Models were evaluated using the following metrics using Thershold.
    - Optimal thresholds varied per model but typically ranged between **0.3 and 0.6** for the best trade-off between precision and recall.
 
 3. **Model Performance:**
-
+- Logistic Regression and Support Vector Machines (SVM) showed the highest accuracy and balanced precision-recall scores.
+- Decision Trees were prone to overfitting, while K-Nearest Neighbors struggled with high-dimensional data.
+- Cross-Validation Accuracy Scores:
+  - Logistic Regression: **Highest Cross-Validation Accuracy**
+  - SVM: **High Cross-Validation Accuracy**
+  - Decision Tree: **Moderate Accuracy but prone to overfitting**
+  - KNN: **Lower Accuracy due to high dimensionality**
 
 ### Recommendations
 1. **Model Deployment:**
