@@ -1,5 +1,5 @@
 # Berkeley: Capstone Project: 
-Berkeley Capstone Project: Fraud 0Detection Model in Bank Financial Transactions. 
+Berkeley Capstone Project: Fraud Detection Model in Bank Financial Transactions. 
 
 ## Capstone Project Fraud Prevention and Detection ML/AI Model in Financial Transactions 
 
