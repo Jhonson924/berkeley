@@ -8,7 +8,7 @@ Compare the results of k-nearest neighbors, logistic regression, decision trees,
 
 ## [Juypter Notebook](https://github.com/Jhonson924/berkeley/blob/main/FinancialTransaction_FraudDetectionModel/financialTransactionFraudDetection.ipynb)
 
-## Deployment model (pkl) (https://github.com/Jhonson924/berkeley/blob/main/FinancialTransaction_FraudDetectionModel/model pkl" 
+## [Deployment model Files (pkl)](https://github.com/Jhonson924/berkeley/tree/main/FinancialTransaction_FraudDetectionModel/model%20pkl)
 
 
 #1. Business Understanding
