@@ -1,10 +1,6 @@
 # Berkeley: Capstone Project: 
-Berkeley Capstone Project: Fraud Detection Model in Bank Financial Transactions. 
 
-## Capstone Project Fraud Detection ML/AI Model in Financial Transactions 
-
-<What Apply classification methods and Compare>
-Compare the results of k-nearest neighbors, logistic regression, decision trees, and support vector machines.
+## Fraud Detection ML/AI Model in Financial Transactions 
 
 ## [Juypter Notebook](https://github.com/Jhonson924/berkeley/blob/main/FinancialTransaction_FraudDetectionModel/financialTransactionFraudDetection.ipynb)
 
