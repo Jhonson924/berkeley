@@ -246,6 +246,39 @@ Highly Skewed Distribution:
 
 - Early morning and late evening dips suggest limited 24/7 activity in the dataset.
 
+## 4.2 Log Transformation
+![before](./images/before_log_transform_amount.png)
+![after](./images/after_log_transform_amount.png)
+
+## 4.3 PCA Variance plot
+![pca](./images/pca_explained_variance.png)
+- The curve rises steeply at first, then begins to level off, showing diminishing returns as you add more components.
+
+- Around 30 components, the curve crosses the 0.95 threshold.
+
+- 95% of the original data's variability using just the first ~30 components.
+
+## 4.4 PCA Before Clustering
+![pcac](./images/pca_before_clustering.png)
+- three to four dense clusters or groupings emerging in this space.
+
+- These indicate natural groupings in the data — excellent for applying unsupervised learning algorithms like KMeans, DBSCAN, or hierarchical clustering.
+
+## 4.5 K-means Clustering
+![kmean](./images/kmeans_clustering.png)
+- Most data points belong to Cluster 1 (blue), with a smaller number in Cluster 0 (red).
+
+- Some dense visual clusters are being treated as part of the same KMeans group
+
+- indicating KMeans is not fully capturing the complexity of the structure.
+
+## 4.6 Convert PCA data to df for visualization
+![pca1](./images/pairplot_pca.png)
+- Clustering shows some ability to separate observations relevant to the target class.
+
+- PCA dimensions preserve structure well, making it easier to visualize patterns and groupings.
+
+- There's a partial alignment between clusters and target, which is promising for semi-supervised or fraud-detection tasks.
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
