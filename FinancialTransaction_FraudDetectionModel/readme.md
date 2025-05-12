@@ -309,6 +309,100 @@ ROC-AUC: 0.9657 → Indicates the model ranks positive instances reasonably well
 
 Though good ROC-AUC, recall on class 1 is near zero, meaning the model is failing to identify fraudulent (or positive) cases.
 
+## 5.2 Decision Tree and GridSearch hyperParameter tunning
+![dt](./images/confusion_matrix_decision_tree.png)
+Precision (class 1): 0.70 → 70% of predicted positives are actually positive.
+
+Recall (class 1): 0.74 → Model captured 74% of the actual positive cases.
+
+F1-score (class 1): 0.72 → Strong balance between precision and recall.
+
+Accuracy: 99.83% → Still high, but now backed by improved minority class detection.
+
+ROC-AUC: 0.8713 → Very good; indicates the model separates classes well overall.
+
+**The Decision Tree model:**
+
+Captures more fraud/positives (target=1) than logistic regression
+
+Accepts a slightly higher false positive rate (25 predictions wrongly flagged), which is typically acceptable in fraud detection to reduce false negatives
+
+## 5.3 SVM 
+![svm](./images/confusion_matrix_svm.png)
+Precision: 1.00 → All predicted frauds were correct.
+
+Recall: 0.08 → It only found 6 out of 78 fraud cases.
+
+F1-score: 0.14 → Very low, indicating poor balance.
+
+ROC-AUC: 0.9750 → Surprisingly high, meaning SVM ranks well, even if classification fails at the 0.5 threshold.
+
+Accuracy: 99.73% → High but misleading due to imbalance.
+
+**SVM**
+
+SVM is extremely conservative: it only classifies positives when very confident.
+
+It misses most of the actual fraud cases (target=1) — this is a critical failure for fraud detection.
+
+## 5.4 K-Nearest Neighbors(KNN) and Hyperparameter tunning
+![knn](./images/confusion_matrix_knn.png)
+![knn1](./images/confusion_matrix_knn1.png)
+
+Precision: 0.67 → About 2 out of 3 positive predictions are correct.
+
+Recall: 0.51 → KNN identifies about half the actual positives (40 of 78).
+
+F1-score: 0.58 → A reasonable trade-off between precision and recall.
+
+ROC-AUC: 0.896 → Indicates strong class separation performance.
+
+Accuracy: 99.79% → Very high but not enough alone due to imbalance.
+
+**KNN Model**
+
+KNN achieves better recall than Logistic Regression and a decent balance overall, comparable to Decision Tree.
+
+False positives and false negatives are more evenly spread than in other models.
+
+improvement via hyperparameter tuning (e.g., adjusting n_neighbors, distance metric, or weighting strategy).
+
+## 5.5 Random Forest and Gridsearch Hyperparameter tunning
+![rf](./images/confusion_matrix_rf.png)
+![rf1](./images/confusion_matrix_rf1.png)
+Precision: 0.94 → Of all predicted fraud cases, 94% were correct.
+
+Recall: 0.65 → The model identified 65% of actual frauds.
+
+F1-score: 0.77 → Strong harmonic balance between precision and recall.
+
+ROC-AUC: 0.9998 → Excellent; the model ranks positives and negatives almost perfectly.
+
+Accuracy: 99.89% → Very high, though expected due to class imbalance.
+
+**Random Forest**
+best-performing model
+
+Very low false positives (3)
+
+Strong fraud detection (51 out of 78)
+
+Balanced generalization, not overfitting like a perfect confusion matrix might suggest
+
+## 5.6 XGBoost and grid search hyperparameter tunning
+![xgb](./images/confusion_matrix_xgb.png)
+![xgb](./images/confusion_matrix_xgb1.png)
+Accuracy: 99.95%
+
+ROC-AUC: 0.9999 → Extremely strong discrimination between classes.
+
+**XGBoost**
+
+Very low false positives (2) and low false negatives (11) — strong balance between sensitivity and specificity.
+
+High recall (0.86) for fraud/positives (target = 1) is excellent.
+
+XGBoost is the best-performing model in your current comparison — it outperforms Random Forest in recall and is significantly better than Logistic Regression, SVM, and KNN.
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
