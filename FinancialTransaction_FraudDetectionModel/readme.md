@@ -296,6 +296,7 @@ Highly Skewed Distribution:
 
 # 5.1 Logistic Regression
 ![lr](./images/confusion_matrix_lr.png)
+
 Precision for class 1: 0.50 → Only 1 out of 2 predicted positives is correct.
 
 Recall for class 1: 0.01 → Model captured only 1 of 78 true positive cases.
@@ -307,6 +308,7 @@ Accuracy: 0.9971 → Misleadingly high due to class imbalance.
 ROC-AUC: 0.9657 → Indicates the model ranks positive instances reasonably well, even though it fails to classify them properly.
 
 Though good ROC-AUC, recall on class 1 is near zero, meaning the model is failing to identify fraudulent (or positive) cases.
+
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
