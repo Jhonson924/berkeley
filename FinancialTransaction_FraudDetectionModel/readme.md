@@ -309,8 +309,9 @@ ROC-AUC: 0.9657 → Indicates the model ranks positive instances reasonably well
 
 Though good ROC-AUC, recall on class 1 is near zero, meaning the model is failing to identify fraudulent (or positive) cases.
 
-## 5.2 Decision Tree and GridSearch hyperParameter tunning
+## 5.2 Decision Tree
 ![dt](./images/confusion_matrix_decision_tree.png)
+
 Precision (class 1): 0.70 → 70% of predicted positives are actually positive.
 
 Recall (class 1): 0.74 → Model captured 74% of the actual positive cases.
@@ -329,6 +330,7 @@ Accepts a slightly higher false positive rate (25 predictions wrongly flagged), 
 
 ## 5.3 SVM 
 ![svm](./images/confusion_matrix_svm.png)
+
 Precision: 1.00 → All predicted frauds were correct.
 
 Recall: 0.08 → It only found 6 out of 78 fraud cases.
@@ -346,6 +348,7 @@ SVM is extremely conservative: it only classifies positives when very confident.
 It misses most of the actual fraud cases (target=1) — this is a critical failure for fraud detection.
 
 ## 5.4 K-Nearest Neighbors(KNN) and Hyperparameter tunning
+
 ![knn](./images/confusion_matrix_knn.png)
 ![knn1](./images/confusion_matrix_knn1.png)
 
@@ -389,6 +392,12 @@ Strong fraud detection (51 out of 78)
 
 Balanced generalization, not overfitting like a perfect confusion matrix might suggest
 
+**Summary**
+tuned Random Forest model is highly accurate and precise.
+
+It significantly reduces false alarms, but still misses a portion of actual frauds (typical in imbalanced datasets).
+
+This model is well-suited for deployment in systems where false positives are costly, and further recall enhancement can be pursued via threshold tuning or ensemble with anomaly detection.
 ## 5.6 XGBoost and grid search hyperparameter tunning
 ![xgb](./images/confusion_matrix_xgb.png)
 ![xgb](./images/confusion_matrix_xgb1.png)
@@ -403,6 +412,24 @@ Very low false positives (2) and low false negatives (11) — strong balance bet
 High recall (0.86) for fraud/positives (target = 1) is excellent.
 
 XGBoost is the best-performing model in your current comparison — it outperforms Random Forest in recall and is significantly better than Logistic Regression, SVM, and KNN.
+
+## 5.7 Plot ROC for all Curves (Before tunning)
+![plt](./images/roc.png)
+
+Baseline performance of six classification models trained on the `targetData1.csv` dataset without any hyperparameter tuning. The following observations summarize their performance:
+
+- **XGBoost** and **Random Forest** achieved perfect or near-perfect ROC-AUC scores (1.00), showing extremely strong class separation.
+
+- **SVM** and **Logistic Regression** performed very well with ROC-AUC scores of 0.98 and 0.97 respectively, indicating good ability to distinguish classes despite class imbalance.
+
+- **K-Nearest Neighbors** (AUC = 0.89) and **Decision Tree** (AUC = 0.87) showed moderately good performance but lagged behind in both recall and
+
+F1-score for the minority class.
+
+- The ROC curves suggest that models with built-in ensemble behavior (XGBoost, Random Forest) outperform simple classifiers out of the box.
+
+This baseline will serve as a benchmark to compare against post-tuning performance after applying Grid Search and Cross-Validation.
+
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
