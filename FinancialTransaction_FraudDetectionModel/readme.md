@@ -413,7 +413,7 @@ High recall (0.86) for fraud/positives (target = 1) is excellent.
 
 XGBoost is the best-performing model in your current comparison — it outperforms Random Forest in recall and is significantly better than Logistic Regression, SVM, and KNN.
 
-## 5.7 Plot ROC for all Curves (Before tunning)
+## 5.7 Plot ROC for all Curve
 ![plt](./images/roc.png)
 
 Baseline performance of six classification models trained on the `targetData1.csv` dataset without any hyperparameter tuning. The following observations summarize their performance:
@@ -430,7 +430,15 @@ F1-score for the minority class.
 
 This baseline will serve as a benchmark to compare against post-tuning performance after applying Grid Search and Cross-Validation.
 
-# 10. Key Findings
+# 6 Model Performance Summary
+![mperf](./images/modelperf.png)
+
+XGBoost offers the best balance for fraud detection: high precision and recall.
+
+SVM and Logistic Regression are not viable due to poor recall — missing most frauds.
+
+Tree-based ensemble methods are much more suitable for imbalanced classification problems like fraud detection.
+# 7. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
 
@@ -440,7 +448,7 @@ This baseline will serve as a benchmark to compare against post-tuning performan
 
 - K-Nearest Neighbors and Decision Tree showed lower recall and AUC, making them less reliable for fraud detection in this context.
 
-# 11. Actionable Insights
+# 8. Actionable Insights
 
 - Ensemble models are highly effective in fraud detection tasks.
 
@@ -448,7 +456,7 @@ This baseline will serve as a benchmark to compare against post-tuning performan
 
 - ROC-AUC scores above 0.99 indicate that the models rank transactions very effectively in terms of fraud risk, which enables threshold-based decisioning.
 
-# 12. Recommendations
+# 9. Recommendations
 
 Deploy XGBoost or tuned Random Forest in production for initial fraud scoring.
 Fine-tune the classification threshold (e.g., 0.3 instead of 0.5) to balance recall and precision based on risk appetite.
