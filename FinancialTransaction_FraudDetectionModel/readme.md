@@ -225,6 +225,26 @@ Conclusion: This is a class imbalance problem. For example:
 
 If target = 1 means fraud, then fraud is rare — a common scenario in real-world datasets.
 
+## Distribution of Amount
+![amt](./images/transAmount.png)
+**Observations:**
+Highly Skewed Distribution:
+
+- The distribution is heavily right-skewed (positively skewed), meaning most transactions have relatively small amounts.
+
+- A large majority of transaction amounts are concentrated near $0, forming a tall, narrow spike.
+
+**Long Tail:**
+
+- There's a long tail stretching toward the right, going up to amounts around $7000, but very few transactions fall in that range.
+
+**Outliers Present:**
+
+- The sparse bars far to the right suggest the presence of outliers or high-value transactions.
+
+**Data Imbalance:**
+
+- The massive spike near 0 and the flatness elsewhere indicate that most of your transactions are of small monetary value, which can pose a challenge for fraud detection models if high-value fraud is rare.
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
