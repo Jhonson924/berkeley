@@ -153,7 +153,7 @@ Dataset contains transaction-level information with the following columns:
 
 - card_on_dark_web: Almost all values are 0 — very few cards reported on the dark web.
 
-![Correlation](./images/heatmap.png)
+![Correlation](./images/heatmap_cardsData.png)
 - has_chip and card_on_dark_web show a slight negative correlation.
 
 - credit_limit has low correlation with other features.
@@ -192,9 +192,9 @@ Dataset contains transaction-level information with the following columns:
 
 ## 3.3. Data Exploration: using - transactions_data
 ![EDS-transactionData](./images/distPlots_transactionsdata.png)
-![Correlation](./images/heatmap.png)]
-**Transaction Data Observation2:**
+![Correlation](./images/heatmap.png)
 
+**Transaction Data Observation2:**
 | Feature Pair          | Correlation | Observation                                                                               |
 | --------------------- | ----------- | ----------------------------------------------------------------------------------------- |
 | `mcc` & `merchant_id` | **0.077**   | Highest correlation in the matrix, though still weak. Possibly similar merchant types.    |
@@ -203,7 +203,6 @@ Dataset contains transaction-level information with the following columns:
 | `mcc` & `hour`        | **0.031**   | Possibly some merchant categories operate more at specific times.                         |
 | `zip` & `card_id`     | **0.017**   | Very weak correlation; some spatial relevance to card issuance or usage.                  |
 
-
 **No Strong Correlations:**
 
 - All values are close to 0, indicating little to no linear relationship between variables.
@@ -211,6 +210,20 @@ Dataset contains transaction-level information with the following columns:
 **Feature Independence:**
 
 - Variables such as amount, mcc, hour, and merchant_id are largely independent, which may provide diverse signals in predictive modeling.
+
+## 3.4. Data Exploration: using - train_fraud_labels
+![dist](./images/distPlots_fraudlabels.png)
+- The target variable is a binary classification label (likely for fraud detection, churn, or anomaly detection).
+
+- The distribution is highly imbalanced:
+
+- Almost all values are 0 (non-target class).
+
+- A very small portion is 1 (target class).
+
+Conclusion: This is a class imbalance problem. For example:
+
+If target = 1 means fraud, then fraud is rare — a common scenario in real-world datasets.
 
 # 10. Key Findings
 
