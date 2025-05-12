@@ -72,6 +72,68 @@ The goal of this project is to predict whether a given financial transaction is 
     7996: Amusement Parks, Carnivals, Circuses
 
 - This mapping can be used to enrich transaction data by decoding MCC codes into readable categories.
+
+## 2.3 Dataset understanding: users_data
+- Rows and Columns: The dataset contains 2,000 records and 14 columns.
+
+- No Missing Values across any columns.
+
+- Gender Distribution:
+
+        Female: 1,016 users
+
+        Male: 984 users (nearly balanced)
+
+- Uniqueness:
+
+        id is unique per user.
+
+        address is nearly unique (1999 unique values out of 2000).
+
+- Age:
+
+        current_age ranges from 18 to 97 (80 unique values).
+
+        retirement_age shows planning across a wide range (29 unique values).
+
+- Financial Fields:
+
+        per_capita_income, yearly_income, and total_debt contain a high degree of variance and should be analyzed further (converted to numeric).
+
+- Credit Information:
+
+        credit_score spans 321 distinct values – good for regression or segmentation.
+
+        num_credit_cards varies from 0 to 8, indicating different credit utilization behaviors.
+
+## 2.4 Dataset understanding: Transactions Data
+Dataset contains transaction-level information with the following columns:
+
+- id: Transaction ID
+- date: Timestamp of the transaction
+- client_id, card_id: Identifiers for the user and card
+- amount: Transaction amount (some with parentheses indicating negative values)
+- use_chip: Method of card use (e.g., swipe)
+- merchant_id, merchant_city, merchant_state, zip, mcc: Merchant details
+- errors: Possibly fraud or error indicators
+
+**Observation1:**
+- Detailed transaction records including amounts, timestamps, and merchant details
+- Covers transactions throughout the 2010s
+- Features transaction types, amounts, and merchant information
+- Perfect for analyzing spending patterns and building fraud detection models
+
+## 2.5 Dataset understanding: train_fraud_labels
+**Fraud Labels Observations**
+- Binary classification labels for transactions
+- Indicates fraudulent vs. legitimate transactions
+- Ideal for training supervised fraud detection models
+![fraudFraudulent (1) / Not Fraudulent (0)](./images/transFraud.png)
+
+## 2.6 Data Understanding Summary
+*   Only Transaction Data, Card Data and User Data will be used and merged for ML/AI modeling Techniques.
+*   MCC_Codes data will be used for reference if required.
+
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
