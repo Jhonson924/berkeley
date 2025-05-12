@@ -159,6 +159,36 @@ Dataset contains transaction-level information with the following columns:
 - credit_limit has low correlation with other features.
 
 - num_cards_issued shows weak positive correlation with has_chip.
+
+## 3.2. Data Exploration: using - users_data
+![EDA-users_data](./images/distPlots_usersdata.png)
+- Age Distribution: Most users are aged 40–70; typical retirement ages range from 60–70.
+
+- Birth Month: Fairly uniform across months.
+
+- Credit Score: Generally well-distributed, centered around 700–750.
+
+- Per Capita & Yearly Income: Right-skewed (majority earn less, few very high).
+
+- Total Debt: Right-skewed; some users carry significant debt.
+
+- Number of Credit Cards: Peaks around 4–5
+![Correlation](./images/heatmap_usersdata.png)
+**Strong positive correlation between:**
+
+- yearly_income and per_capita_income
+
+**Weak correlation between:**
+
+- credit_score and debt/income levels
+
+- num_credit_cards and credit score
+![pairPlot](./images/pairplot_usersdata.png)
+- Gender-based clusters are not strongly separated in most numeric features.
+
+- Outliers are visible in income and debt values.
+
+- Latitude/Longitude pairs show varied user geographies.
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
