@@ -189,6 +189,29 @@ Dataset contains transaction-level information with the following columns:
 - Outliers are visible in income and debt values.
 
 - Latitude/Longitude pairs show varied user geographies.
+
+## 3.3. Data Exploration: using - transactions_data
+![EDS-transactionData](./images/distPlots_transactionsdata.png)
+![Correlation](./images/heatmap.png)]
+**Transaction Data Observation2:**
+
+| Feature Pair          | Correlation | Observation                                                                               |
+| --------------------- | ----------- | ----------------------------------------------------------------------------------------- |
+| `mcc` & `merchant_id` | **0.077**   | Highest correlation in the matrix, though still weak. Possibly similar merchant types.    |
+| `amount` & `hour`     | **0.054**   | Slight tendency for amount to vary with hour—could relate to spending patterns.           |
+| `mcc` & `amount`      | **−0.034**  | Minor negative correlation—some merchant categories may have lower/higher average spends. |
+| `mcc` & `hour`        | **0.031**   | Possibly some merchant categories operate more at specific times.                         |
+| `zip` & `card_id`     | **0.017**   | Very weak correlation; some spatial relevance to card issuance or usage.                  |
+
+
+**No Strong Correlations:**
+
+- All values are close to 0, indicating little to no linear relationship between variables.
+
+**Feature Independence:**
+
+- Variables such as amount, mcc, hour, and merchant_id are largely independent, which may provide diverse signals in predictive modeling.
+
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
