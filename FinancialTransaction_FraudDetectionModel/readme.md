@@ -250,6 +250,18 @@ Highly Skewed Distribution:
 ![before](./images/before_log_transform_amount.png)
 ![after](./images/after_log_transform_amount.png)
 
+**Before log tranformation**
+- The original distribution of amount is right-skewed (positively skewed).
+
+- A large number of transactions have low amounts (clustered near 0), while a few have extremely high values, creating a long tail.
+
+- skewed distribution can negatively impact machine learning models, especially those sensitive to feature scale (e.g., logistic regression, KNN, SVM).
+
+**After log transformation**
+- The log transformation compresses the large values and stretches the small ones, converting the skewed distribution into a more normal (bell-shaped) distribution.
+
+- makes the data more suitable for modeling, particularly for algorithms that assume normality or benefit from standardized scales.
+
 ## 4.3 PCA Variance plot
 ![pca](./images/pca_explained_variance.png)
 - The curve rises steeply at first, then begins to level off, showing diminishing returns as you add more components.
