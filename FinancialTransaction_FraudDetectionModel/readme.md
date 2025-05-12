@@ -49,6 +49,29 @@ The goal of this project is to predict whether a given financial transaction is 
 - Fraud Detection and Security
 - Create risk scoring models
 
+# 2. Data Understanding
+
+## 2.1 Dataset understanding: cards_data
+- card_number and id are unique identifiers.
+
+- card_brand and card_type are categorical features with a few distinct values.
+
+- credit_limit is stored as a string (e.g., $24295) and will need conversion for numeric analysis.
+
+- card_on_dark_web has only one value (No) — likely not useful for predictive modeling unless there's variation elsewhere.
+
+- Columns like expires, acct_open_date, and year_pin_last_changed are time-based features that can be transformed further.
+
+## 2.2 Dataset understanding: mcc_codes
+- The MCC (Merchant Category Code) mapping examples like:
+
+    5812: Eating Places and Restaurants
+
+    5541: Service Stations
+
+    7996: Amusement Parks, Carnivals, Circuses
+
+- This mapping can be used to enrich transaction data by decoding MCC codes into readable categories.
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
