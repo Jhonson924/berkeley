@@ -129,6 +129,9 @@ Dataset contains transaction-level information with the following columns:
 - Indicates fraudulent vs. legitimate transactions
 - Ideal for training supervised fraud detection models
 ![fraudFraudulent (1) / Not Fraudulent (0)](./images/transFraud.png)
+- This dataset is heavily imbalanced, which is common in fraud detection scenarios.
+
+- Such imbalance means that if a model simply predicts "Not Fraudulent" for every transaction, it would still achieve very high accuracy (~99.9%) — but would fail at detecting frauds, which are the critical minority.
 
 ## 2.6 Data Understanding Summary
 *   Only Transaction Data, Card Data and User Data will be used and merged for ML/AI modeling Techniques.
