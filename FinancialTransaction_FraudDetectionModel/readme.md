@@ -1,7 +1,7 @@
 # Berkeley: Capstone Project: 
 Berkeley Capstone Project: Fraud Detection Model in Bank Financial Transactions. 
 
-## Capstone Project Fraud Prevention and Detection ML/AI Model in Financial Transactions 
+## Capstone Project Fraud Detection ML/AI Model in Financial Transactions 
 
 <What Apply classification methods and Compare>
 Compare the results of k-nearest neighbors, logistic regression, decision trees, and support vector machines.
@@ -96,7 +96,8 @@ Fraud Detection and Security
 - Build fraud detection model
 - Create risk scoring models
 
-10. Key Findings
+
+# 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
 
@@ -106,7 +107,7 @@ Fraud Detection and Security
 
 - K-Nearest Neighbors and Decision Tree showed lower recall and AUC, making them less reliable for fraud detection in this context.
 
-11. Actionable Insights
+# 11. Actionable Insights
 
 - Ensemble models are highly effective in fraud detection tasks.
 
