@@ -137,6 +137,28 @@ Dataset contains transaction-level information with the following columns:
 *   Only Transaction Data, Card Data and User Data will be used and merged for ML/AI modeling Techniques.
 *   MCC_Codes data will be used for reference if required.
 
+# 3. Exploratory Data Analysis (EDA)
+
+## 3.1. Data Exploration: using - cards_data
+![EDA-cardsData](./images/distPlots.png)
+- cvv: Uniformly distributed (likely due to random generation or truncation).
+
+- num_cards_issued: Mostly 1 or 2 cards, few outliers.
+
+- credit_limit: Right-skewed distribution; most clients have lower credit limits.
+
+- year_pin_last_changed: Clusters around early 2000s to 2020.
+
+- has_chip: Binary distribution — mostly "YES" (1).
+
+- card_on_dark_web: Almost all values are 0 — very few cards reported on the dark web.
+
+![Correlation](./images/heatmap.png)
+- has_chip and card_on_dark_web show a slight negative correlation.
+
+- credit_limit has low correlation with other features.
+
+- num_cards_issued shows weak positive correlation with has_chip.
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
