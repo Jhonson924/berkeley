@@ -233,7 +233,7 @@ Highly Skewed Distribution:
 - The massive spike near 0 and the flatness elsewhere indicate that most of your transactions are of small monetary value, which can pose a challenge for fraud detection models if high-value fraud is rare.
 
 ## 4.1 Distribution transaction hour
-![amt](./images/transHour.png.png)
+![amt](./images/transHour.png)
 - Peak transaction hours: Transactions sharply increase starting from 6 AM and peak between 10 AM to 1 PM, with each of these hours handling close to or just above 1 million transactions.
 
 - Low activity hours: From 12 AM to 5 AM, transaction volume remains significantly low, likely due to overnight inactivity.
