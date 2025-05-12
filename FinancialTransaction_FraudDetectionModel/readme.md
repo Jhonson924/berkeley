@@ -18,7 +18,7 @@ This comprehensive financial dataset combines transaction records, customer info
 
 ##1.2. Dataset
 
-💳 Financial Transactions Dataset: Analytics
+[💳 Financial Transactions Dataset: Analytics](https://www.kaggle.com/datasets/computingvictor/transactions-fraud-datasets)
 
 Links to an external site.
 
@@ -52,12 +52,12 @@ The goal of this project is to predict whether a given financial transaction is 
 
 Fraud Detection and Security
 
-#1. Business Understanding
+# 1. Business Understanding
 
-##1.1. Overview
+## 1.1. Overview
 This comprehensive financial dataset combines transaction records, customer information, and card data from a banking institution, spanning across the 2010s decade.
 
-##1.2. Dataset
+## 1.2. Dataset
 
 💳 Financial Transactions Dataset: Analytics
 
@@ -77,7 +77,7 @@ Links to an external site.
 
 Each dataset contributes to building a holistic feature set for fraud detection.
 
-##1.3. Business Context
+## 1.3. Business Context
 
 The primary objective of this dataset is to facilitate the development and evaluation of machine learning models aimed at detecting fraudulent financial transactions
 
@@ -89,7 +89,7 @@ The goal of this project is to predict whether a given financial transaction is 
 
     Build a binary classification model that, given a new transaction’s features (such as amount, timestamp, transaction type, etc.), predicts the likelihood that it is fraudulent(Fraud or Not Fraud)
 
-##1.4. Business Goal
+## 1.4. Business Goal
 
 Fraud Detection and Security
 
