@@ -211,21 +211,7 @@ Dataset contains transaction-level information with the following columns:
 
 - Variables such as amount, mcc, hour, and merchant_id are largely independent, which may provide diverse signals in predictive modeling.
 
-## 3.4. Data Exploration: using - train_fraud_labels
-![dist](./images/distPlots_fraudlabels.png)
-- The target variable is a binary classification label (likely for fraud detection, churn, or anomaly detection).
-
-- The distribution is highly imbalanced:
-
-- Almost all values are 0 (non-target class).
-
-- A very small portion is 1 (target class).
-
-Conclusion: This is a class imbalance problem. For example:
-
-If target = 1 means fraud, then fraud is rare — a common scenario in real-world datasets.
-
-## Distribution of Amount
+# 4. Distribution of Amount
 ![amt](./images/transAmount.png)
 **Observations:**
 Highly Skewed Distribution:
@@ -245,6 +231,21 @@ Highly Skewed Distribution:
 **Data Imbalance:**
 
 - The massive spike near 0 and the flatness elsewhere indicate that most of your transactions are of small monetary value, which can pose a challenge for fraud detection models if high-value fraud is rare.
+
+## 4.1 Distribution transaction hour
+![amt](./images/transHour.png.png)
+- Peak transaction hours: Transactions sharply increase starting from 6 AM and peak between 10 AM to 1 PM, with each of these hours handling close to or just above 1 million transactions.
+
+- Low activity hours: From 12 AM to 5 AM, transaction volume remains significantly low, likely due to overnight inactivity.
+
+- Gradual decline: After the 1 PM peak, transaction volume gradually decreases, with a noticeable drop after 4 PM.
+
+- Late-night lows: The lowest activity is again observed post-9 PM through midnight.
+
+- This pattern is consistent with consumer behavior and business hours—most financial activities occur during regular daytime hours when businesses are open and customers are active.
+
+- Early morning and late evening dips suggest limited 24/7 activity in the dataset.
+
 # 10. Key Findings
 
 - The dataset is highly imbalanced with very few fraudulent transactions.
