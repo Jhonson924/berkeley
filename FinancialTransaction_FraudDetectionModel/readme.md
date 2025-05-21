@@ -1,4 +1,4 @@
-# Berkeley: Capstone Project: 💳 Fraud Detection ML/AI Model in Financial Transactions
+# 💳 Fraud Detection ML/AI Model in Financial Transactions
 
 ## 📌 Project Overview
 
