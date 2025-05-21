@@ -83,5 +83,5 @@ The dataset combines multiple sources:
 
 ## 👥 Contributors
 
-Developed by Johnson Susainathan(Jhonson) as part of an end-to-end ML&AI fraud detection pipeline project. It was completed as part of their **final Capstone project** in the **Berkeley Professional Certificate in Machine Learning and Artificial Intelligence**, under the supervision of **Professor  [Viviana Márquez](https://www.linkedin.com/in/vivianamarquez/)**
+Developed by Johnson Susainathan(Jhonson) as part of an end-to-end ML&AI fraud detection capstone project. It was completed as part of their **final Capstone project** in the **Berkeley Professional Certificate in Machine Learning and Artificial Intelligence**, under the supervision of **Professor  [Viviana Márquez](https://www.linkedin.com/in/vivianamarquez/)**
 
