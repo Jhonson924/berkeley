@@ -1,4 +1,4 @@
-# 💳 Fraud Detection Using Machine Learning
+# Berkeley: Capstone Project: 💳 Fraud Detection ML/AI Model in Financial Transactions
 
 ## 📌 Project Overview
 
@@ -18,7 +18,7 @@ The dataset combines multiple sources:
 
 ### [Juypter Notebook](https://github.com/Jhonson924/berkeley/blob/main/FinancialTransaction_FraudDetectionModel/financialTransactionFraudDetection.ipynb)
 
-### [Deployment model Files (pkl)](https://github.com/Jhonson924/berkeley/tree/main/FinancialTransaction_FraudDetectionModel/model%20pkl)
+### [Deployment models (XGBoost, LightGBM, XGBoost(Resampled) Files (pkl)](https://github.com/Jhonson924/berkeley/tree/main/FinancialTransaction_FraudDetectionModel/Depolyment%20Models)
 
 - **Exploratory Analysis** – EDA on transaction, card, and user data
 - **Data Preparation** – Merging and cleaning multi-source data
@@ -83,5 +83,5 @@ The dataset combines multiple sources:
 
 ## 👥 Contributors
 
-Developed by Johnson Susainathan as part of an end-to-end ML fraud detection pipeline project. It was completed as part of their **final Capstone project** in the **Professional Certificate in Machine Learning and Artificial Intelligence**, under the supervision of **Professor  [Viviana Márquez](https://www.linkedin.com/in/vivianamarquez/)**
+Developed by Johnson Susainathan(Jhonson) as part of an end-to-end ML&AI fraud detection pipeline project. It was completed as part of their **final Capstone project** in the **Berkeley Professional Certificate in Machine Learning and Artificial Intelligence**, under the supervision of **Professor  [Viviana Márquez](https://www.linkedin.com/in/vivianamarquez/)**
 
